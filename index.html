@@ -77,32 +77,15 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .hdr-contacts a:hover{color:var(--cyan)}
 
 /* ─── HERO ─── */
-#hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden}
-.hero-img-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
-#hero-img{width:100%;height:115%;object-fit:cover;object-position:65% center;
-  transform-origin:center top;
-  filter:saturate(0.55) brightness(0.72);
-  animation:kenburns 26s ease-in-out infinite alternate;
-  will-change:transform}
-@keyframes kenburns{
-  from{transform:scale(1.0) translate(0,0)}
-  to  {transform:scale(1.14) translate(-2%,-1.5%)}}
-/* Tech light-leak: matches blue LEDs in photo */
-.hero-img-overlay{position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 55% 45% at 78% 38%,rgba(0,130,220,.14) 0%,transparent 65%),
-    radial-gradient(ellipse 30% 28% at 82% 30%,rgba(0,212,255,.09) 0%,transparent 55%)}
-/* Horizontal scanlines — tech / lab feel */
+#hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden;background:var(--bg)}
+#hero-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block}
+/* Gradient за текстом — читаемость поверх 3D */
+#hero::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(105deg,rgba(8,12,20,.82) 0%,rgba(8,12,20,.45) 42%,transparent 68%)}
+/* Scanlines */
 #hero::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px)}
-.hero-ov{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(110deg,
-    rgba(8,12,20,.96) 0%,
-    rgba(8,12,20,.70) 34%,
-    rgba(8,12,20,.20) 50%,
-    rgba(8,12,20,.72) 70%,
-    rgba(8,12,20,.92) 100%)}
-.hero-c{position:relative;z-index:2;max-width:560px;padding:0 48px;margin-left:7%}
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.03) 3px,rgba(0,0,0,.03) 4px)}
+.hero-c{position:relative;z-index:3;max-width:560px;padding:0 48px;margin-left:7%}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25);border-radius:20px;padding:6px 16px;font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:28px}
 .hero-badge::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:dot 2s infinite}
 @keyframes dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
@@ -114,28 +97,6 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 .btn-p:hover{opacity:.88;transform:translateY(-1px)}
 .btn-s{background:transparent;color:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 28px;font-size:15px;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block}
 .btn-s:hover{border-color:var(--cyan);background:rgba(0,212,255,.06)}
-/* ─── HERO DEVICE CARD ─── */
-.hero-dev{position:absolute;right:7%;top:50%;transform:translateY(-50%);width:38%;max-width:520px;z-index:3}
-.hero-dev-inner{animation:hd-float 5.5s ease-in-out infinite}
-@keyframes hd-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hero-dev-frame{position:relative;border-radius:18px;overflow:hidden;
-  border:1px solid rgba(0,212,255,.22);
-  box-shadow:0 0 0 1px rgba(255,255,255,.03),0 0 70px rgba(0,212,255,.15),0 40px 80px rgba(0,0,0,.65)}
-.hero-dev-img{width:100%;height:auto;display:block;filter:saturate(.88) brightness(.82)}
-.hero-dev-frame::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(135deg,rgba(0,212,255,.09) 0%,transparent 48%),
-             linear-gradient(to bottom,transparent 62%,rgba(8,12,20,.55) 100%)}
-.hero-dev-frame::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:18px;
-  box-shadow:inset 1px 1px 0 rgba(0,212,255,.30),inset -1px -1px 0 rgba(0,212,255,.08)}
-.hero-dev-specs{display:flex;gap:10px;margin-top:14px}
-.hero-dev-spec{flex:1;background:rgba(8,12,20,.78);backdrop-filter:blur(14px);
-  border:1px solid rgba(0,212,255,.16);border-radius:12px;padding:12px 8px;text-align:center}
-.hero-dev-spec b{display:block;font-size:16px;font-weight:700;color:var(--cyan);letter-spacing:-.3px;font-style:normal;font-family:inherit}
-.hero-dev-spec small{display:block;font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.3px}
-@media(max-width:1280px){
-  .hero-dev{width:36%;right:4%}
-}
-@media(max-width:1180px){.hero-dev{display:none}}
 
 .hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:10px;letter-spacing:2.5px;text-transform:uppercase}
 .scroll-ln{width:1px;height:44px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:sln 2.2s infinite}
@@ -685,11 +646,7 @@ footer{background:rgba(255,255,255,.02);border-top:1px solid var(--border);paddi
 
 <!-- ═══════ HERO ═══════ -->
 <section id="hero">
-  <div class="hero-img-wrap">
-    <img id="hero-img" src="img/hero.jpg" alt="Аналитическое оборудование FEED-UP" loading="eager" decoding="async">
-    <div class="hero-img-overlay"></div>
-  </div>
-  <div class="hero-ov"></div>
+  <canvas id="hero-canvas"></canvas>
   <div class="hero-c">
     <div class="hero-badge">Исследовательское оборудование</div>
     <h1 class="hero-h1">На острие<br><em>научного</em><br>прогресса</h1>
@@ -697,18 +654,6 @@ footer{background:rgba(255,255,255,.02);border-top:1px solid var(--border);paddi
     <div class="hero-btns">
       <button class="btn-p" onclick="openModal()">Оставить заявку</button>
       <a href="#products" class="btn-s">Каталог продукции</a>
-    </div>
-  </div>
-  <div class="hero-dev" id="hero-dev">
-    <div class="hero-dev-inner">
-      <div class="hero-dev-frame">
-        <img src="img/sem.jpg" alt="Сканирующий электронный микроскоп" class="hero-dev-img" loading="eager">
-      </div>
-      <div class="hero-dev-specs">
-        <div class="hero-dev-spec"><b>0.8 нм</b><small>Разрешение</small></div>
-        <div class="hero-dev-spec"><b>200 кВ</b><small>Напряжение</small></div>
-        <div class="hero-dev-spec"><b>10⁻⁶ Па</b><small>Вакуум</small></div>
-      </div>
     </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-ln"></div></div>
@@ -1965,80 +1910,142 @@ footer{background:rgba(255,255,255,.02);border-top:1px solid var(--border);paddi
 
 <script>
 // ═══════════════════════════════════════════════
-//  CHAPTER 1 — HERO IMAGE PARALLAX
+//  CHAPTER 1 — 3D HERO SCENE (Three.js)
 // ═══════════════════════════════════════════════
 gsap.registerPlugin(ScrollTrigger);
 (function(){
-  // ── Scroll-driven image parallax ──────────────
-  gsap.to('#hero-img', {
-    y: '22%',
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: 1.5
-    }
+  // ── WebGL fallback ────────────────────────────
+  function hasWebGL(){
+    try{const c=document.createElement('canvas');
+      return !!(window.WebGLRenderingContext&&(c.getContext('webgl')||c.getContext('experimental-webgl')));
+    }catch(e){return false;}
+  }
+
+  const canvas = document.getElementById('hero-canvas');
+  if(!canvas || !window.THREE){ canvas&&(canvas.style.display='none'); return; }
+  if(!hasWebGL()){ canvas.style.display='none'; return; }
+
+  const isMobile = window.innerWidth < 768;
+  let W = window.innerWidth, H = window.innerHeight;
+
+  // ── Renderer ──────────────────────────────────
+  const renderer = new THREE.WebGLRenderer({canvas, antialias: !isMobile, alpha:false, powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(devicePixelRatio, isMobile ? 1.5 : 2));
+  renderer.setSize(W, H);
+  renderer.setClearColor(0x080c14, 1);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x080c14, 0.028);
+
+  const camera = new THREE.PerspectiveCamera(60, W/H, 0.1, 100);
+  camera.position.set(0, 0, 6);
+
+  // ── Particles ────────────────────────────────
+  const count = isMobile ? 500 : 1400;
+  const pos = new Float32Array(count * 3);
+  for(let i = 0; i < count * 3; i++) pos[i] = (Math.random() - 0.5) * 22;
+  const pGeo = new THREE.BufferGeometry();
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pMat = new THREE.PointsMaterial({
+    color: 0x00d4ff, size: isMobile ? 0.07 : 0.048,
+    transparent: true, opacity: 0.6, sizeAttenuation: true
+  });
+  scene.add(new THREE.Points(pGeo, pMat));
+
+  // ── Torus knot ───────────────────────────────
+  const kSeg = isMobile ? 80 : 150;
+  const knotGeo = new THREE.TorusKnotGeometry(1.3, 0.38, kSeg, 16, 2, 3);
+
+  const solidMat = new THREE.MeshStandardMaterial({
+    color: 0x003399, emissive: 0x001166, metalness: 0.92, roughness: 0.12
+  });
+  const solidKnot = new THREE.Mesh(knotGeo, solidMat);
+  scene.add(solidKnot);
+
+  const wireMat = new THREE.MeshBasicMaterial({
+    color: 0x00d4ff, wireframe: true, transparent: true, opacity: 0.16
+  });
+  const wireKnot = new THREE.Mesh(knotGeo, wireMat);
+  scene.add(wireKnot);
+
+  // ── Lights ───────────────────────────────────
+  scene.add(new THREE.AmbientLight(0x112244, 2.5));
+  const lA = new THREE.PointLight(0x00d4ff, 9, 16);
+  lA.position.set(4, 3, 4); scene.add(lA);
+  const lB = new THREE.PointLight(0x0055ff, 5, 16);
+  lB.position.set(-4, -3, 3); scene.add(lB);
+  const lC = new THREE.PointLight(0x7b2fff, 3, 12);
+  lC.position.set(0, -4, -2); scene.add(lC);
+
+  // ── Mouse parallax (desktop) ─────────────────
+  let mx = 0, my = 0;
+  if(!isMobile){
+    window.addEventListener('mousemove', e => {
+      mx = (e.clientX/W - 0.5) * 1.6;
+      my = (e.clientY/H - 0.5) * 1.6;
+    });
+  }
+
+  // ── Resize ───────────────────────────────────
+  let resizeTimer;
+  window.addEventListener('resize', ()=>{
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(()=>{
+      W = window.innerWidth; H = window.innerHeight;
+      camera.aspect = W/H;
+      camera.updateProjectionMatrix();
+      renderer.setSize(W, H);
+    }, 150);
   });
 
-  // ── Hero text rises & fades on scroll ─────────
+  // ── GSAP scroll effects ──────────────────────
+  gsap.to('#hero-canvas', {
+    opacity: 0, ease: 'none',
+    scrollTrigger:{trigger:'#hero', start:'25% top', end:'75% top', scrub:1}
+  });
   gsap.to('.hero-c', {
-    y: '-80px',
-    opacity: 0,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: '5% top',
-      end: '45% top',
-      scrub: 1
-    }
+    y: '-80px', opacity: 0, ease: 'none',
+    scrollTrigger:{trigger:'#hero', start:'5% top', end:'45% top', scrub:1}
   });
-
-  // ── Scroll indicator fades quickly ────────────
   gsap.to('.hero-scroll', {
-    opacity: 0,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: '12% top',
-      scrub: true
-    }
+    opacity: 0, ease: 'none',
+    scrollTrigger:{trigger:'#hero', start:'top top', end:'12% top', scrub:true}
   });
 
-  // ── Cyan overlay intensity on scroll ──────────
-  gsap.to('.hero-img-overlay', {
-    opacity: 0.4,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true
-    }
-  });
+  // ── Entrance animation ───────────────────────
+  gsap.from([solidKnot.scale, wireKnot.scale], {x:0,y:0,z:0,duration:1.8,ease:'power3.out'});
 
-  // ── Device card entrance (slide from right) ───
-  gsap.from('#hero-dev', {
-    opacity: 0,
-    x: 70,
-    duration: 1.4,
-    ease: 'power3.out',
-    delay: 0.6
-  });
+  // ── Render loop ──────────────────────────────
+  const clock = new THREE.Clock();
+  let active = true;
+  document.addEventListener('visibilitychange', ()=>{ active = !document.hidden; });
 
-  // ── Device card scroll parallax (softer than text)
-  gsap.to('#hero-dev', {
-    y: -50,
-    opacity: 0,
-    ease: 'none',
-    scrollTrigger: {
-      trigger: '#hero',
-      start: '10% top',
-      end: '58% top',
-      scrub: 1.5
-    }
-  });
+  (function loop(){
+    requestAnimationFrame(loop);
+    if(!active) return;
+    const t = clock.getElapsedTime();
+
+    solidKnot.rotation.x = t * 0.17;
+    solidKnot.rotation.y = t * 0.27;
+    wireKnot.rotation.x  = t * 0.17;
+    wireKnot.rotation.y  = t * 0.27;
+
+    // Particles slow drift
+    pGeo.getAttribute('position').array;
+    scene.children[0].rotation.y = t * 0.022;
+    scene.children[0].rotation.x = Math.sin(t * 0.07) * 0.1;
+
+    // Orbiting key light
+    lA.position.x = Math.cos(t * 0.45) * 5;
+    lA.position.z = Math.sin(t * 0.45) * 5;
+
+    // Smooth mouse parallax
+    camera.position.x += (mx * 0.65 - camera.position.x) * 0.04;
+    camera.position.y += (-my * 0.45 - camera.position.y) * 0.04;
+    camera.lookAt(0, 0, 0);
+
+    renderer.render(scene, camera);
+  })();
 })();
 
 // ═══════════════════════════════════════════════
