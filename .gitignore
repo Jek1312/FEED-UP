@@ -6,3 +6,12 @@ desktop.ini
 # Editor
 .vscode/
 *.swp
+
+# Dev / diagnostic scripts
+diag*.js
+diag*.mjs
+diag*.spec.js
+extracted_check.js
+test-results/
+playwright-report/
+node_modules/
