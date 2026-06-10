@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="ru" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO CORE ═══ -->
+<title>FEED-UP — Лабораторное и аналитическое оборудование в Москве | Поставка и сервис</title>
+<meta name="description" content="FEED-UP — поставка и сервис высокоточного лабораторного оборудования в Москве. Электронные микроскопы (СЭМ/ПЭМ), перчаточные боксы, XRF/XRD анализаторы, масс-спектрометры, FTIR. Работаем с НИИ, университетами и промышленностью. ☎ +7 (991) 162-43-37">
+<meta name="keywords" content="лабораторное оборудование, аналитическое оборудование, купить лабораторное оборудование Москва, электронный микроскоп СЭМ, перчаточный бокс glovebox, XRF анализатор, XRD дифрактометр, масс-спектрометр, FTIR спектрометр, рамановский спектрометр, поставка научного оборудования, оборудование для НИИ, лабораторное оборудование для университетов">
+<meta name="author" content="FEED-UP">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://feed-up.ru/">
+
+<!-- ═══ SECURITY HEADERS ═══ -->
+<!-- Запрет встраивания в iframe (кликджекинг) -->
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; connect-src 'self' https://api.web3forms.com https://fonts.googleapis.com https://fonts.gstatic.com;">
+<!-- Запрет MIME-sniffing -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<!-- Политика реферера — не передаём URL другим сайтам -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FEED-UP">
+<meta property="og:title" content="FEED-UP — Лабораторное и аналитическое оборудование">
+<meta property="og:description" content="Поставка и сервис высокоточного лабораторного оборудования. СЭМ, перчаточные боксы, XRF/XRD, масс-спектрометры, FTIR. Для НИИ, университетов и промышленности.">
+<meta property="og:url" content="https://feed-up.ru/">
+<meta property="og:image" content="https://feed-up.ru/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+
+<!-- ═══ GEO / LOCATION ═══ -->
+<meta name="geo.region" content="RU-MOW">
+<meta name="geo.placename" content="Москва">
+<meta name="geo.position" content="55.7186;37.6107">
+<meta name="ICBM" content="55.7186, 37.6107">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@11/dist/motion.js"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c14;
+  --bg2:#0d1525;
+  --card:rgba(255,255,255,0.065);
+  --card-h:rgba(255,255,255,0.11);
+  --cyan:#00d4ff;
+  --blue:#0055ff;
+  --purple:#7b2fff;
+  --text:#e8eaf0;
+  --muted:#8a9bb5;
+  --border:rgba(255,255,255,0.08);
+  --glow:rgba(0,212,255,0.3);
+  --r:12px;
+  --hh:90px;
+}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+
+/* ─── HEADER ─── */
+#hdr{position:fixed;top:0;left:0;right:0;height:var(--hh);z-index:1000;display:flex;align-items:center;padding:0 64px;gap:44px;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+#hdr.on{background:rgba(8,12,20,.94);backdrop-filter:blur(24px);border-color:var(--border)}
+.hdr-logo{font-size:27px;font-weight:800;letter-spacing:-.5px;color:#fff;text-decoration:none;white-space:nowrap}
+.hdr-logo span{color:var(--cyan)}
+.hdr-nav{display:flex;gap:2px;margin:0 auto;list-style:none}
+.hdr-nav a{color:var(--muted);text-decoration:none;font-size:16px;font-weight:500;padding:10px 18px;border-radius:10px;transition:color .2s,background .2s}
+.hdr-nav a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.hdr-contacts{display:flex;flex-direction:column;align-items:flex-end;gap:2px;white-space:nowrap}
+.hdr-contacts a{color:var(--text);text-decoration:none;font-size:14px;transition:color .2s}
+.hdr-contacts a:first-child{font-size:17px;font-weight:600;color:#fff}
+.hdr-contacts a:hover{color:var(--cyan)}
+
+/* ─── HERO ─── */
+#hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;overflow:hidden}
+.hero-img-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+#hero-img{width:100%;height:115%;object-fit:cover;object-position:65% center;
+  transform-origin:center top;
+  filter:saturate(0.55) brightness(0.72);
+  animation:kenburns 26s ease-in-out infinite alternate;
+  will-change:transform}
+@keyframes kenburns{
+  from{transform:scale(1.0) translate(0,0)}
+  to  {transform:scale(1.14) translate(-2%,-1.5%)}}
+/* Tech light-leak: matches blue LEDs in photo */
+.hero-img-overlay{position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 45% at 78% 38%,rgba(0,130,220,.14) 0%,transparent 65%),
+    radial-gradient(ellipse 30% 28% at 82% 30%,rgba(0,212,255,.09) 0%,transparent 55%)}
+/* Horizontal scanlines — tech / lab feel */
+#hero::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px)}
+.hero-ov{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(110deg,
+    rgba(8,12,20,.96) 0%,
+    rgba(8,12,20,.70) 34%,
+    rgba(8,12,20,.20) 50%,
+    rgba(8,12,20,.72) 70%,
+    rgba(8,12,20,.92) 100%)}
+.hero-c{position:relative;z-index:2;max-width:560px;padding:0 48px;margin-left:7%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.25);border-radius:20px;padding:6px 16px;font-size:11px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:28px}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:dot 2s infinite}
+@keyframes dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero-h1{font-size:clamp(44px,6vw,76px);font-weight:800;line-height:1.06;letter-spacing:-2px;color:#fff;margin-bottom:22px}
+.hero-h1 em{font-style:normal;background:linear-gradient(135deg,var(--cyan),var(--blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:17px;color:var(--muted);line-height:1.65;margin-bottom:40px;max-width:520px}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-p{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s,transform .2s;text-decoration:none;display:inline-block;font-family:inherit}
+.btn-p:hover{opacity:.88;transform:translateY(-1px)}
+.btn-s{background:transparent;color:#fff;border:1px solid var(--border);border-radius:10px;padding:14px 28px;font-size:15px;font-weight:500;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block}
+.btn-s:hover{border-color:var(--cyan);background:rgba(0,212,255,.06)}
+/* ─── HERO DEVICE CARD ─── */
+.hero-dev{position:absolute;right:7%;top:50%;transform:translateY(-50%);width:38%;max-width:520px;z-index:3}
+.hero-dev-inner{animation:hd-float 5.5s ease-in-out infinite}
+@keyframes hd-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-dev-frame{position:relative;border-radius:18px;overflow:hidden;
+  border:1px solid rgba(0,212,255,.22);
+  box-shadow:0 0 0 1px rgba(255,255,255,.03),0 0 70px rgba(0,212,255,.15),0 40px 80px rgba(0,0,0,.65)}
+.hero-dev-img{width:100%;height:auto;display:block;filter:saturate(.88) brightness(.82)}
+.hero-dev-frame::before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(135deg,rgba(0,212,255,.09) 0%,transparent 48%),
+             linear-gradient(to bottom,transparent 62%,rgba(8,12,20,.55) 100%)}
+.hero-dev-frame::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:18px;
+  box-shadow:inset 1px 1px 0 rgba(0,212,255,.30),inset -1px -1px 0 rgba(0,212,255,.08)}
+.hero-dev-specs{display:flex;gap:10px;margin-top:14px}
+.hero-dev-spec{flex:1;background:rgba(8,12,20,.78);backdrop-filter:blur(14px);
+  border:1px solid rgba(0,212,255,.16);border-radius:12px;padding:12px 8px;text-align:center}
+.hero-dev-spec b{display:block;font-size:16px;font-weight:700;color:var(--cyan);letter-spacing:-.3px;font-style:normal;font-family:inherit}
+.hero-dev-spec small{display:block;font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.3px}
+@media(max-width:1280px){
+  .hero-dev{width:36%;right:4%}
+}
+@media(max-width:1180px){.hero-dev{display:none}}
+
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--muted);font-size:10px;letter-spacing:2.5px;text-transform:uppercase}
+.scroll-ln{width:1px;height:44px;background:linear-gradient(to bottom,var(--cyan),transparent);animation:sln 2.2s infinite}
+@keyframes sln{0%{opacity:0;transform:scaleY(0);transform-origin:top}50%{opacity:1;transform:scaleY(1);transform-origin:top}100%{opacity:0;transform:scaleY(1);transform-origin:bottom}}
+
+/* ─── SECTION BASE ─── */
+.sec{padding:100px 48px;max-width:1320px;margin:0 auto}
+.sec-lbl{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:12px}
+.sec-h2{font-size:clamp(28px,3.5vw,46px);font-weight:800;letter-spacing:-1px;color:#fff;line-height:1.12;margin-bottom:16px}
+.sec-desc{font-size:16px;color:var(--muted);max-width:580px;line-height:1.7;margin-bottom:56px}
+
+/* ─── ADVANTAGES ─── */
+#adv{background:linear-gradient(180deg,rgba(0,212,255,.03) 0%,transparent 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:80px 48px}
+#adv .in{max-width:1320px;margin:0 auto}
+.adv-g{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-radius:var(--r);overflow:hidden}
+.adv-c{background:var(--bg);padding:40px 32px;transition:background .3s}
+.adv-c:hover{background:rgba(0,212,255,.04)}
+.adv-ic{width:48px;height:48px;background:rgba(0,212,255,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px}
+.adv-c h3{font-size:17px;font-weight:700;color:#fff;margin-bottom:10px}
+.adv-c p{font-size:14px;color:var(--muted);line-height:1.6}
+
+/* ─── PRODUCTS ─── */
+.prod-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.prod-c{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:32px;cursor:pointer;transition:border-color .3s,background .3s,transform .3s;text-decoration:none;color:inherit;display:block}
+.prod-c:hover{border-color:var(--glow);background:var(--card-h);transform:translateY(-4px)}
+.prod-ic{width:56px;height:56px;background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(0,85,255,.1));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
+.prod-c h3{font-size:18px;font-weight:700;color:#fff;margin-bottom:10px}
+.prod-c p{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:20px}
+.prod-lnk{font-size:13px;color:var(--cyan);font-weight:600}
+
+/* ─── CATALOG DETAIL ─── */
+#catalog{padding:0 48px 80px;max-width:1320px;margin:0 auto}
+.cat-section{margin-bottom:80px}
+.cat-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.cat-hdr-left{}
+.cat-num{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+.cat-title{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.5px}
+.cat-desc{font-size:14px;color:var(--muted);margin-top:4px}
+.cat-count{font-size:12px;color:var(--muted);background:var(--card);border:1px solid var(--border);border-radius:20px;padding:5px 14px;white-space:nowrap;flex-shrink:0}
+.cat-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cat-c{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:22px;transition:border-color .3s,background .3s;display:flex;flex-direction:column}
+.cat-c:hover{border-color:var(--glow);background:var(--card-h)}
+.cat-c-model{font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;opacity:.8}
+.cat-c h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.cat-c p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:14px;flex:1}
+.cat-c-specs{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.cat-c-spec{display:flex;justify-content:space-between;font-size:11px;gap:8px}
+.cat-c-spec span:first-child{color:var(--muted)}
+.cat-c-spec span:last-child{color:#fff;font-weight:600;text-align:right}
+.cat-c-btn{background:transparent;border:1px solid var(--border);color:var(--cyan);border-radius:8px;padding:9px 14px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:inherit;text-align:center;margin-top:auto}
+.cat-c-btn:hover{background:rgba(0,212,255,.08);border-color:var(--cyan)}
+.cat-sub{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:28px 0 14px;padding-left:2px}
+@media(max-width:1200px){.cat-g{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.cat-g{grid-template-columns:1fr 1fr}#catalog{padding:0 20px 60px}}
+@media(max-width:520px){.cat-g{grid-template-columns:1fr}}
+
+/* ─── PRODUCT DETAIL ─── */
+#pd{background:rgba(0,85,255,.025);padding:100px 48px;border-top:1px solid var(--border)}
+#pd .in{max-width:1320px;margin:0 auto}
+.pd-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:48px}
+.pd-view{background:var(--card);border:1px solid var(--border);border-radius:20px;aspect-ratio:4/3;overflow:hidden;position:relative;cursor:grab}
+.pd-view:active{cursor:grabbing}
+#prod-canvas{width:100%;height:100%}
+.pd-hint{position:absolute;bottom:12px;right:14px;font-size:11px;color:var(--muted);letter-spacing:.5px;pointer-events:none}
+.pd-model{font-size:12px;font-weight:700;color:var(--cyan);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+.pd-h2{font-size:30px;font-weight:800;color:#fff;letter-spacing:-.5px;margin-bottom:18px}
+.pd-p{color:var(--muted);font-size:15px;line-height:1.72;margin-bottom:14px}
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:12px;overflow:hidden;margin:28px 0}
+.spec{background:var(--card);padding:16px 20px}
+.spec-l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.spec-v{font-size:15px;font-weight:700;color:#fff}
+.pd-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ─── METHODS ─── */
+.meth-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.meth-c{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:28px;transition:border-color .3s,background .3s;display:flex;flex-direction:column}
+.meth-c:hover{border-color:var(--glow)}
+.meth-ic{width:44px;height:44px;background:rgba(0,212,255,.1);border-radius:12px;
+  display:flex;align-items:center;justify-content:center;color:var(--cyan);
+  margin-bottom:16px;box-shadow:0 0 16px rgba(0,212,255,.1);flex-shrink:0}
+.meth-ic svg{width:22px;height:22px}
+.meth-abbr{font-size:10px;color:var(--cyan);font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:10px;opacity:.75}
+.meth-c h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.35}
+.meth-c>p{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:16px;flex:1}
+.meth-params{display:flex;flex-direction:column;gap:7px;padding:14px;
+  background:rgba(255,255,255,.028);border:1px solid var(--border);
+  border-radius:8px;margin-bottom:14px}
+.meth-param{display:flex;justify-content:space-between;align-items:center;font-size:11.5px;gap:8px}
+.meth-k{color:var(--muted)}
+.meth-v{color:#fff;font-weight:600;text-align:right}
+.meth-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.meth-tag{font-size:10.5px;padding:4px 10px;background:rgba(0,212,255,.07);
+  border:1px solid rgba(0,212,255,.14);border-radius:20px;color:var(--cyan);font-weight:500}
+
+/* ─── SERVICE ─── */
+#svc{background:linear-gradient(180deg,transparent,rgba(0,212,255,.025),transparent);padding:100px 48px;border-top:1px solid var(--border)}
+#svc .in{max-width:1320px;margin:0 auto}
+.svc-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.svc-list li{display:flex;align-items:flex-start;gap:16px;padding:20px;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:border-color .3s}
+.svc-list li:hover{border-color:var(--glow)}
+.svc-n{font-size:11px;font-weight:800;color:var(--cyan);min-width:28px;background:rgba(0,212,255,.1);border-radius:6px;padding:4px 8px;text-align:center;flex-shrink:0;margin-top:2px}
+.svc-list h4{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.svc-list p{font-size:13px;color:var(--muted)}
+.stat-g{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.stat-c{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px 24px;text-align:center}
+.stat-n{font-size:42px;font-weight:800;color:var(--cyan);letter-spacing:-1px;display:block;margin-bottom:6px}
+.stat-l{font-size:13px;color:var(--muted)}
+
+/* ─── ABOUT ─── */
+.abt-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:48px}
+.abt-t p{color:var(--muted);font-size:15px;line-height:1.75;margin-bottom:14px}
+.abt-f{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.abt-f li{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--text)}
+.abt-f li::before{content:'✓';width:22px;height:22px;background:rgba(0,212,255,.12);color:var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0}
+.abt-vis{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.abt-stat{text-align:center;padding:24px 16px}
+.abt-stat .n{font-size:38px;font-weight:800;color:#fff;letter-spacing:-1px}
+.abt-stat .n span{color:var(--cyan)}
+.abt-stat .l{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* ─── REQUEST SECTION ─── */
+#req{background:linear-gradient(135deg,rgba(0,85,255,.06),rgba(0,212,255,.03));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:100px 48px}
+#req .in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.req-form{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:20px;padding:40px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.f-g{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.f-g label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+.f-g input,.f-g select,.f-g textarea{background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;padding:14px 16px;color:var(--text);font-family:inherit;font-size:14px;transition:border-color .2s;outline:none}
+.f-g input:focus,.f-g select:focus,.f-g textarea:focus{border-color:var(--cyan);background:rgba(0,212,255,.04)}
+.f-g select option{background:#0d1525}
+.f-g textarea{resize:vertical;min-height:100px}
+.f-sub{width:100%;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;border:none;border-radius:10px;padding:16px;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s;font-family:inherit;letter-spacing:.3px}
+.f-sub:hover{opacity:.88}
+.req-info .sec-h2{font-size:clamp(26px,3vw,38px)}
+.req-info p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:32px}
+.ci-list{display:flex;flex-direction:column;gap:14px}
+.ci{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px}
+.ci-ic{width:40px;height:40px;background:rgba(0,212,255,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.ci-t{font-size:14px;color:var(--text);font-weight:500}
+.ci-l{font-size:11px;color:var(--muted)}
+.f-ok{display:none;text-align:center;padding:48px 20px}
+.f-ok .ok-ic{font-size:52px;margin-bottom:16px}
+.f-ok h3{font-size:22px;font-weight:800;color:#fff;margin-bottom:8px}
+.f-ok p{color:var(--muted);font-size:14px}
+
+/* ─── PARTNERS ─── */
+.pts{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.pt{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 24px;font-size:13px;font-weight:600;color:var(--muted);transition:color .2s,border-color .2s}
+.pt:hover{color:#fff;border-color:rgba(255,255,255,.2)}
+.pt-sub{text-align:center;font-size:12px;color:var(--muted);margin:20px 0 40px}
+
+/* ─── NEWS ─── */
+.news-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.news-c{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:transform .3s,border-color .3s;cursor:pointer}
+.news-c:hover{transform:translateY(-4px);border-color:var(--glow)}
+.news-th{height:160px;display:flex;align-items:center;justify-content:center;font-size:40px}
+.news-th.t1{background:linear-gradient(135deg,rgba(0,85,255,.25),rgba(0,212,255,.1))}
+.news-th.t2{background:linear-gradient(135deg,rgba(123,47,255,.2),rgba(0,85,255,.15))}
+.news-th.t3{background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(123,47,255,.1))}
+.news-b{padding:22px}
+.news-d{font-size:11px;color:var(--cyan);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.news-c h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.4}
+.news-c p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* ─── CONTACTS ─── */
+#contacts{padding:100px 48px}
+#contacts .in{max-width:1320px;margin:0 auto}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:48px}
+.con-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px}
+.cr{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.cr-ic{width:44px;height:44px;background:rgba(0,212,255,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.cr-info h4{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.cr-info a,.cr-info p{font-size:15px;color:#fff;text-decoration:none;font-weight:500;line-height:1.5}
+.cr-info a:hover{color:var(--cyan)}
+.map-ph{background:var(--card);border:1px solid var(--border);border-radius:20px;height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted);font-size:14px}
+.map-ph span{font-size:40px}
+
+/* ─── FOOTER ─── */
+footer{background:rgba(255,255,255,.02);border-top:1px solid var(--border);padding:36px 48px}
+.ft-in{max-width:1320px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.ft-logo{font-size:18px;font-weight:800;color:#fff}
+.ft-logo span{color:var(--cyan)}
+.ft-nav{display:flex;gap:24px;list-style:none}
+.ft-nav a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .2s}
+.ft-nav a:hover{color:#fff}
+.ft-copy{font-size:12px;color:var(--muted)}
+
+/* ─── MODAL ─── */
+.m-ov{position:fixed;inset:0;background:rgba(8,12,20,.88);backdrop-filter:blur(14px);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.m-ov.on{opacity:1;pointer-events:all}
+.m-box{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:48px;width:90%;max-width:520px;position:relative;transform:translateY(20px);transition:transform .3s}
+.m-ov.on .m-box{transform:translateY(0)}
+.m-cls{position:absolute;top:14px;right:14px;background:var(--card);border:1px solid var(--border);color:var(--muted);width:36px;height:36px;border-radius:8px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:color .2s;font-family:inherit}
+.m-cls:hover{color:#fff}
+.m-box h2{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px}
+.m-box>.sub{font-size:14px;color:var(--muted);margin-bottom:28px}
+
+/* ─── REVEAL ANIMATION ─── */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s,transform .6s}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv:nth-child(2){transition-delay:.08s}
+.rv:nth-child(3){transition-delay:.14s}
+.rv:nth-child(4){transition-delay:.20s}
+
+/* ─── SVG ICON SIZING & COLOR ─── */
+.adv-ic,.prod-ic{color:var(--cyan)}
+.ci-ic,.cr-ic{color:var(--cyan)}
+.adv-ic svg,.prod-ic svg{width:24px;height:24px;display:block}
+.ci-ic svg{width:20px;height:20px;display:block}
+.cr-ic svg{width:20px;height:20px;display:block}
+.news-th{display:flex;align-items:center;justify-content:center}
+.news-th svg{width:52px;height:52px;stroke:rgba(255,255,255,.75);fill:none;
+  stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.ok-ic{display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.ok-ic svg{width:56px;height:56px;stroke:var(--cyan);fill:none;
+  stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.hdr-mob-phone svg{width:14px;height:14px;display:inline-block;vertical-align:middle;
+  margin-right:4px;stroke:currentColor;fill:none;stroke-width:1.5;
+  stroke-linecap:round;stroke-linejoin:round}
+
+/* ─── SCROLL PROGRESS BAR ─── */
+#prog{position:fixed;top:0;left:0;width:100%;height:2px;z-index:2001;pointer-events:none;
+  background:linear-gradient(90deg,var(--cyan),var(--purple),var(--blue));
+  transform-origin:0 50%;transform:scaleX(0)}
+
+/* ─── 3D TILT PERSPECTIVE ─── */
+.prod-g,.meth-g,.news-g{perspective:1000px}
+.adv-g{perspective:1200px}
+
+/* ─── CARD HOVER GLOW + SHADOW ─── */
+.prod-c:hover,.news-c:hover,.meth-c:hover{
+  box-shadow:0 0 0 1px rgba(0,212,255,.25),0 20px 50px rgba(0,0,0,.4);
+  border-color:rgba(0,212,255,.28)!important}
+.cat-c:hover{
+  box-shadow:0 0 0 1px rgba(0,212,255,.2),0 12px 36px rgba(0,0,0,.3);
+  border-color:rgba(0,212,255,.25)!important}
+.adv-c:hover{box-shadow:0 4px 24px rgba(0,212,255,.06)}
+.svc-list li:hover{box-shadow:0 4px 20px rgba(0,212,255,.06);border-color:rgba(0,212,255,.22)!important}
+
+/* ─── PRIMARY BUTTON SHIMMER ─── */
+.btn-p{position:relative!important;overflow:hidden!important}
+.btn-p::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.22) 50%,transparent 60%);
+  transform:translateX(-120%);transition:transform .55s ease}
+.btn-p:hover{opacity:.95!important;transform:translateY(-2px)!important;
+  box-shadow:0 8px 28px rgba(0,212,255,.28)!important}
+.btn-p:hover::after{transform:translateX(120%)}
+
+/* ─── SECONDARY BUTTON HOVER ─── */
+.btn-s:hover{box-shadow:0 0 0 1px rgba(0,212,255,.25),0 4px 16px rgba(0,212,255,.08)!important}
+
+/* ─── SECTION HEADING ACCENT LINE ─── */
+.sec-h2::after{content:'';display:block;width:44px;height:3px;
+  background:linear-gradient(90deg,var(--cyan),var(--blue));
+  border-radius:2px;margin-top:16px}
+
+/* ─── SECTION LABEL DASH ─── */
+.sec-lbl{display:inline-flex;align-items:center;gap:8px}
+.sec-lbl::before{content:'';display:inline-block;width:18px;height:2px;
+  background:var(--cyan);border-radius:1px;flex-shrink:0}
+
+/* ─── ICON GLOW ─── */
+.adv-ic,.prod-ic,.ci-ic,.cr-ic{
+  box-shadow:0 0 18px rgba(0,212,255,.12),inset 0 1px 0 rgba(255,255,255,.08)!important}
+
+/* ─── GRADIENT STAT NUMBERS ─── */
+.stat-n{background:linear-gradient(125deg,#fff 10%,var(--cyan) 80%)!important;
+  -webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;
+  background-clip:text!important}
+
+/* ─── FORM FOCUS GLOW ─── */
+.f-g input:focus,.f-g select:focus,.f-g textarea:focus{
+  box-shadow:0 0 0 3px rgba(0,212,255,.1)!important}
+
+/* ─── NEWS THUMBNAIL ZOOM ─── */
+.news-c:hover .news-th{transform:scale(1.06)}
+.news-th{transition:transform .5s ease;overflow:hidden}
+
+/* ─── CONTACT INFO CARD HOVER ─── */
+.ci{transition:border-color .3s,background .3s}
+.ci:hover{border-color:rgba(0,212,255,.22);background:var(--card-h)}
+
+/* ─── PARTNER TAG HOVER ─── */
+.pt:hover{background:rgba(0,212,255,.06)}
+
+/* ─── CATALOG ACCORDION (mobile) ─── */
+.cat-toggle{display:none}  /* hidden on desktop */
+@media(max-width:768px){
+  .cat-toggle{
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;background:none;border:none;color:inherit;cursor:pointer;
+    padding:0;font-family:inherit;text-align:left;
+  }
+  .cat-toggle-icon{
+    width:28px;height:28px;border:1px solid var(--border);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:16px;color:var(--cyan);flex-shrink:0;transition:transform .3s;
+  }
+  .cat-section.open .cat-toggle-icon{transform:rotate(45deg)}
+  .cat-section .cat-g,.cat-section .cat-sub{
+    display:none;   /* collapsed by default on mobile */
+  }
+  .cat-section.open .cat-g,.cat-section.open .cat-sub{
+    display:grid;
+  }
+  .cat-section.open .cat-sub{display:block}
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:1200px){
+  .sec,.sec-desc{max-width:100%}
+}
+@media(max-width:1024px){
+  :root{--hh:80px}
+  .adv-g{grid-template-columns:1fr 1fr}
+  .prod-g{grid-template-columns:1fr 1fr}
+  .meth-g,.news-g{grid-template-columns:1fr 1fr}
+  .pd-g,.svc-g,.abt-g,.con-g{grid-template-columns:1fr;gap:40px}
+  #req .in{grid-template-columns:1fr}
+  .hdr-nav a{font-size:14px;padding:8px 12px}
+  .hero-c{padding:0 28px}
+  .hero-sub{font-size:15px}
+}
+@media(max-width:768px){
+  /* Section padding */
+  .sec{padding:60px 20px}
+  #adv{padding:60px 20px}
+  #pd,#svc,#req,#contacts{padding:60px 20px}
+  #catalog{padding:0 20px 60px}
+  footer{padding:28px 20px}
+  .cat-section{margin-bottom:20px}
+
+  /* Header */
+  :root{--hh:64px}
+  #hdr{padding:0 16px;gap:12px}
+  .hdr-nav{display:none}
+  .hdr-contacts{display:none}
+  .hdr-mob-phone{display:flex!important}
+  .hdr-logo{font-size:20px}
+
+  /* Hero */
+  .hero-c{padding:0 20px;margin-left:0}
+  .hero-h1{font-size:clamp(36px,9vw,56px);letter-spacing:-1.5px}
+  .hero-btns{flex-direction:column;gap:12px}
+  .btn-p,.btn-s{text-align:center;padding:13px 20px;font-size:14px}
+
+  /* Grids → single column */
+  .adv-g,.meth-g,.news-g,.prod-g{grid-template-columns:1fr}
+  .adv-c{padding:24px 20px}
+  .stat-g{grid-template-columns:1fr 1fr}
+  .abt-vis{grid-template-columns:1fr 1fr}
+  .abt-g{gap:32px}
+  .service-grid,.svc-g{grid-template-columns:1fr}
+
+  /* Forms */
+  .f-row{grid-template-columns:1fr}
+  .req-form{padding:24px 20px}
+
+  /* Product detail */
+  .pd-g{gap:32px}
+  .specs{grid-template-columns:1fr}
+
+  /* Catalog header */
+  .cat-hdr{flex-direction:column;align-items:flex-start;gap:12px}
+  .cat-count{align-self:flex-start}
+  .cat-g{grid-template-columns:1fr}
+
+  /* Partners */
+  .pts{gap:10px}
+  .pt{padding:10px 14px;font-size:12px}
+
+  /* Contacts */
+  .con-g{grid-template-columns:1fr}
+  .map-ph{height:220px}
+
+  /* Footer */
+  .ft-in{flex-direction:column;align-items:flex-start;gap:16px}
+  .ft-nav{flex-wrap:wrap;gap:12px 20px}
+}
+@media(max-width:480px){
+  .adv-g{grid-template-columns:1fr}
+  .specs{grid-template-columns:1fr}
+  .abt-vis{grid-template-columns:1fr 1fr}
+  .hero-h1{font-size:clamp(32px,10vw,48px)}
+}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCHEMA.ORG JSON-LD — читается поисковиками и ИИ-агентами
+     ═══════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "Organization"],
+      "@id": "https://feed-up.ru/#organization",
+      "name": "FEED-UP",
+      "description": "Поставка и сервисное обслуживание высокоточного лабораторного и аналитического оборудования для научных исследований, контроля качества и промышленных испытаний.",
+      "url": "https://feed-up.ru",
+      "telephone": "+79911624337",
+      "email": "info@feed-up.ru",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "пер. Духовской, д. 17, помещ. 15/1",
+        "addressLocality": "Москва",
+        "postalCode": "115191",
+        "addressRegion": "Москва",
+        "addressCountry": "RU"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.7186,
+        "longitude": 37.6107
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "areaServed": {"@type": "Country", "name": "Россия"},
+      "knowsAbout": [
+        "Лабораторное оборудование",
+        "Аналитическое оборудование",
+        "Электронная микроскопия",
+        "Рентгенофлуоресцентный анализ XRF",
+        "Рентгеновская дифракция XRD",
+        "Перчаточные боксы glovebox",
+        "Масс-спектрометрия",
+        "ИК-Фурье-спектроскопия FTIR",
+        "Рамановская спектроскопия",
+        "Термогравиметрический анализ TGA DSC"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Каталог лабораторного оборудования",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Перчаточный бокс с инертной атмосферой", "description": "Герметичная рабочая камера O₂/H₂O < 1 ppm, корпус AISI 316L, встроенная система очистки газа. Модель FEED-UP GB-1200."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Сканирующий электронный микроскоп СЭМ", "description": "Разрешение до 0.8 нм, ускоряющее напряжение до 200 кВ, вакуум 10⁻⁶ Па. Для материаловедения, нанотехнологий, биологии."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Рентгенофлуоресцентный анализатор XRF", "description": "Неразрушающий элементный анализ от Na до U. Настольные и портативные модели."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Рентгеновский дифрактометр XRD", "description": "Порошковая и монокристальная дифракция. Фазовый анализ, определение кристаллической структуры."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Масс-спектрометр", "description": "Квадрупольные, ионно-ловушечные и времяпролётные масс-спектрометры. GC-MS, LC-MS, ICP-MS."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "ИК-Фурье-спектрометр FTIR", "description": "Идентификация органических и неорганических соединений, анализ полимеров, фармацевтический контроль."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Рамановский спектрометр", "description": "Конфокальная рамановская микроскопия, картирование материалов, анализ углеродных структур."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Термоаналитическая система TGA DSC", "description": "Термогравиметрия, дифференциальная сканирующая калориметрия, одновременный термический анализ."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Рентгеновский томограф", "description": "Промышленная КТ-томография для неразрушающего контроля качества деталей и материалов."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Оптический металлографический микроскоп", "description": "Инвертированные и прямые металлографические системы для анализа микроструктуры металлов и сплавов."}}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://feed-up.ru/#website",
+      "url": "https://feed-up.ru",
+      "name": "FEED-UP — Лабораторное оборудование",
+      "publisher": {"@id": "https://feed-up.ru/#organization"},
+      "inLanguage": "ru-RU"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Где купить лабораторное оборудование в Москве?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Компания FEED-UP находится по адресу: 115191, Москва, пер. Духовской, д. 17, помещ. 15/1. Принимаем заявки онлайн и по телефону +7 (991) 162-43-37. Поставляем оборудование по всей России."}
+        },
+        {
+          "@type": "Question",
+          "name": "Какое аналитическое оборудование поставляет FEED-UP?",
+          "acceptedAnswer": {"@type": "Answer", "text": "FEED-UP поставляет: сканирующие и просвечивающие электронные микроскопы (СЭМ/ПЭМ), рентгенофлуоресцентные анализаторы (XRF), рентгеновские дифрактометры (XRD), масс-спектрометры (GC-MS, ICP-MS), ИК-Фурье-спектрометры (FTIR), рамановские спектрометры, термоаналитические системы (TGA/DSC), рентгеновские томографы, оптические металлографические системы, перчаточные боксы с инертной атмосферой."}
+        },
+        {
+          "@type": "Question",
+          "name": "Что такое перчаточный бокс и зачем он нужен в лаборатории?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Перчаточный бокс (glovebox) — герметичная камера с инертной атмосферой аргон/азот, где O₂ и H₂O < 1 ppm. Применяется при работе с литий-ионными батареями, катализаторами, органическими полупроводниками и другими веществами, чувствительными к влаге и кислороду. FEED-UP GB-1200 оснащён корпусом из нержавеющей стали AISI 316L и встроенной системой регенерации газа."}
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли сервисное обслуживание и гарантия на оборудование?",
+          "acceptedAnswer": {"@type": "Answer", "text": "FEED-UP обеспечивает полный цикл сервиса: монтаж и пусконаладку, обучение операторов, плановое техническое обслуживание, аварийный ремонт, поставку запасных частей и расходных материалов. Выездные инженеры — по всей России."}
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли FEED-UP с научными институтами и государственными закупками?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Да. FEED-UP поставляет оборудование в НИИ, институты РАН, государственные и частные университеты, промышленные R&D лаборатории. Компания работает по 44-ФЗ и 223-ФЗ, оформляет государственные контракты и котировки."}
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит электронный микроскоп или перчаточный бокс?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Стоимость зависит от конфигурации и комплектации. Для получения коммерческого предложения оставьте заявку на сайте или позвоните по телефону +7 (991) 162-43-37. Менеджер подберёт оптимальную конфигурацию под ваши задачи и бюджет."}
+        },
+        {
+          "@type": "Question",
+          "name": "Каковы сроки поставки лабораторного оборудования?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Расходные материалы — со склада за 1–3 рабочих дня. Стандартное аналитическое оборудование — 4–12 недель. Специализированные системы под заказ — 12–24 недели. Точные сроки уточняет менеджер после обработки заявки."}
+        },
+        {
+          "@type": "Question",
+          "name": "Поставляет ли FEED-UP расходные материалы и запасные части?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Да. FEED-UP поддерживает складской запас расходных материалов: детекторы, катоды, мишени, кристаллы, фильтры, уплотнения. Наличие на складе минимизирует простой оборудования."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div id="prog"></div>
+
+<!-- ═══════ HEADER ═══════ -->
+<header id="hdr">
+  <a href="#" class="hdr-logo">FEED<span>-UP</span></a>
+  <nav><ul class="hdr-nav">
+    <li><a href="#products">Каталог</a></li>
+    <li><a href="#methods">Методы</a></li>
+    <li><a href="#svc">Сервис</a></li>
+    <li><a href="#about">О компании</a></li>
+    <li><a href="#news">Новости</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul></nav>
+  <div class="hdr-contacts">
+    <a href="tel:+79911624337">+7 (991) 162-43-37</a>
+    <a class="eml" data-n="info" data-d="feed-up.ru"></a>
+  </div>
+  <!-- Compact phone for mobile (hdr-contacts is hidden) -->
+  <a href="tel:+79911624337" class="hdr-mob-phone" style="display:none;color:#fff;text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.74 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.74 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Позвонить</a>
+</header>
+
+<!-- ═══════ HERO ═══════ -->
+<section id="hero">
+  <div class="hero-img-wrap">
+    <img id="hero-img" src="img/hero.jpg" alt="Аналитическое оборудование FEED-UP" loading="eager" decoding="async">
+    <div class="hero-img-overlay"></div>
+  </div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <div class="hero-badge">Исследовательское оборудование</div>
+    <h1 class="hero-h1">На острие<br><em>научного</em><br>прогресса</h1>
+    <p class="hero-sub">Поставки и сервисное обслуживание высокоточного лабораторного и аналитического оборудования для исследовательских институтов, университетов и промышленных предприятий.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="openModal()">Оставить заявку</button>
+      <a href="#products" class="btn-s">Каталог продукции</a>
+    </div>
+  </div>
+  <div class="hero-dev" id="hero-dev">
+    <div class="hero-dev-inner">
+      <div class="hero-dev-frame">
+        <img src="img/sem.jpg" alt="Сканирующий электронный микроскоп" class="hero-dev-img" loading="eager">
+      </div>
+      <div class="hero-dev-specs">
+        <div class="hero-dev-spec"><b>0.8 нм</b><small>Разрешение</small></div>
+        <div class="hero-dev-spec"><b>200 кВ</b><small>Напряжение</small></div>
+        <div class="hero-dev-spec"><b>10⁻⁶ Па</b><small>Вакуум</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="scroll-ln"></div></div>
+</section>
+
+<!-- ═══════ ADVANTAGES ═══════ -->
+<div id="adv">
+  <div class="in">
+    <div class="adv-g">
+      <div class="adv-c rv"><div class="adv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M8.5 3v6L4 17a2 2 0 0 0 1.9 2.8h12.2A2 2 0 0 0 20 17L15.5 9V3"/><line x1="6.5" y1="14" x2="17.5" y2="14"/></svg></div><h3>Премиальное оборудование</h3><p>Продукция ведущих мировых производителей с многолетней репутацией в области научных исследований.</p></div>
+      <div class="adv-c rv"><div class="adv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Наличие на складе</h3><p>Широкий ассортимент расходных материалов и комплектующих в наличии — сокращаем время простоя оборудования.</p></div>
+      <div class="adv-c rv"><div class="adv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Квалифицированный сервис</h3><p>Собственная команда сертифицированных инженеров для монтажа, обучения и технического обслуживания.</p></div>
+      <div class="adv-c rv"><div class="adv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><h3>Полный цикл поддержки</h3><p>От подбора конфигурации до пусконаладки и гарантийного сопровождения на весь срок эксплуатации.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PRODUCTS ═══════ -->
+<section id="products" class="sec">
+  <div class="sec-lbl">Продукция</div>
+  <h2 class="sec-h2">Каталог оборудования</h2>
+  <p class="sec-desc">Полный спектр аналитического и лабораторного оборудования для науки, контроля качества и промышленных исследований России.</p>
+  <div class="prod-g">
+    <a href="#cat-glovebox" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Перчаточные боксы и эксикаторы</h3><p>Металлические и акриловые боксы для работы в инертной атмосфере. O₂ и H₂O &lt;1 ppm.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-sem" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Электронные микроскопы</h3><p>СЭМ, ПЭМ, двулучевые и настольные системы. Разрешение до 1.3 нм.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-opt" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div><h3>Оптические микроскопы</h3><p>Металлографические, конфокальные, цифровые и поляризационные микроскопы. Увеличение до 17 280×.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-prep" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><h3>Подготовка образцов</h3><p>Отрезные и шлифовально-полировальные станки, оборудование для заливки и напыления.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-hard" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 7v5l3 3"/></svg></div><h3>Твердомеры и трибология</h3><p>Микро- и нанотвердомеры, трибометры, профилометры. Методы Виккерса, Роквелла, Бринелля.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-spec" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>Анализаторы и спектрометры</h3><p>XRF, XRD, OES, ICP, FTIR и Рамановские спектрометры для химического и фазового анализа.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-test" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v6L4 16a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4l-4-8V2"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="8" y1="2" x2="16" y2="2"/></svg></div><h3>Испытательное оборудование</h3><p>Электромеханические и сервогидравлические машины, маятниковые копры, климатические камеры.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-tomo" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="21"/><line x1="3" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="21" y2="12"/></svg></div><h3>Системы томографии</h3><p>Микро- и промышленная рентгеновская томография для неразрушающего контроля материалов.</p><span class="prod-lnk">Смотреть →</span></a>
+    <a href="#cat-thermo" class="prod-c rv"><div class="prod-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Термоанализ и реология</h3><p>TGA, DSC, дилатометры, реометры и калориметры для термических и реологических измерений.</p><span class="prod-lnk">Смотреть →</span></a>
+  </div>
+</section>
+
+<!-- ═══════ FULL CATALOG ═══════ -->
+<div id="catalog">
+
+  <!-- ── 1. ПЕРЧАТОЧНЫЕ БОКСЫ И ЭКСИКАТОРЫ ── -->
+  <div class="cat-section" id="cat-glovebox">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 01</div>
+        <div class="cat-title">Перчаточные боксы и эксикаторы</div>
+        <div class="cat-desc">Металлические и акриловые камеры для работы в инертной атмосфере, а также лабораторные эксикаторы</div>
+      </div>
+      <div class="cat-count">8 позиций</div>
+    </div>
+
+    <div class="cat-sub">Металлические перчаточные боксы</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-GB-1200-PRO</div>
+        <h4>Перчаточный бокс GB-1200 Pro</h4>
+        <p>Однокамерный металлический бокс из нержавеющей стали AISI 316L с системой рециркуляции газа и двумя колонками очистки. Двойной шлюз (передний + боковой), автоматическая регенерация. Применяется при синтезе литиевых аккумуляторов, работе с чувствительными катализаторами и органическими полупроводниками.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂ / H₂O</span><span>&lt;1 ppm</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>1200×600×600 мм</span></div>
+          <div class="cat-c-spec"><span>Порты</span><span>2 × Ø150 мм</span></div>
+          <div class="cat-c-spec"><span>Газ</span><span>Ar / N₂ 99.999%</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Перчаточный бокс FU-GB-1200-PRO')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-GB-2000-DUO</div>
+        <h4>Перчаточный бокс GB-2000 Duo</h4>
+        <p>Двухкамерная система увеличенного объёма с тремя парами перчаточных портов, двумя независимыми шлюзами и встроенным монитором параметров атмосферы в реальном времени. Подходит для крупногабаритного оборудования и командной работы.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂ / H₂O</span><span>&lt;1 ppm</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>2000×600×600 мм</span></div>
+          <div class="cat-c-spec"><span>Порты</span><span>3 × Ø150 мм</span></div>
+          <div class="cat-c-spec"><span>Объём</span><span>~720 л</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Перчаточный бокс FU-GB-2000-DUO')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-GB-800-COMPACT</div>
+        <h4>Перчаточный бокс GB-800 Compact</h4>
+        <p>Компактный металлический бокс для небольших лабораторий. Один передний шлюз, одна пара перчаточных портов, встроенная колонка очистки на 1 кг молекулярных сит. Оптимален для хранения и монтажа чувствительных образцов и компонентов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂ / H₂O</span><span>&lt;5 ppm</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>800×600×600 мм</span></div>
+          <div class="cat-c-spec"><span>Порты</span><span>2 × Ø150 мм</span></div>
+          <div class="cat-c-spec"><span>Расход газа</span><span>0.5 л/мин</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Перчаточный бокс FU-GB-800-COMPACT')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-GB-1200-VAC</div>
+        <h4>Перчаточный бокс GB-1200 Vacuum</h4>
+        <p>Металлический бокс с совмещённой функцией вакуумного сухого бокса. Переключение режимов «инертная атмосфера / вакуум» без разгерметизации. Встроенный вакуумный насос TMP (10⁻⁴ Па). Применяется в полупроводниковых и тонкоплёночных технологиях.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂ / H₂O</span><span>&lt;1 ppm</span></div>
+          <div class="cat-c-spec"><span>Вакуум</span><span>до 10⁻⁴ Па</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>1200×600×600 мм</span></div>
+          <div class="cat-c-spec"><span>Газ</span><span>Ar / N₂ / He</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Перчаточный бокс FU-GB-1200-VAC')">Запросить цену</button>
+      </div>
+    </div>
+
+    <div class="cat-sub">Акриловые перчаточные боксы</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-AGB-600</div>
+        <h4>Акриловый перчаточный бокс AGB-600</h4>
+        <p>Однокамерный акриловый (PMMA) бокс для работы в атмосфере азота или аргона. Полная прозрачность стенок обеспечивает удобное наблюдение за экспериментом. Один шлюз, пара перчаточных портов. Для фармацевтических и химических лабораторий.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂</span><span>&lt;10 ppm</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>600×500×500 мм</span></div>
+          <div class="cat-c-spec"><span>Материал</span><span>PMMA + нерж. сталь</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Акриловый бокс FU-AGB-600')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-AGB-900W</div>
+        <h4>Акриловый перчаточный бокс AGB-900W</h4>
+        <p>Широкоформатный акриловый бокс с усиленной рамой из анодированного алюминия. Две пары перчаточных портов, широкий шлюз для крупных образцов. Съёмная передняя панель для лёгкой чистки. Производство Sanplatec (Япония).</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Остаточный O₂</span><span>&lt;5 ppm</span></div>
+          <div class="cat-c-spec"><span>Размер камеры</span><span>900×600×550 мм</span></div>
+          <div class="cat-c-spec"><span>Шлюз</span><span>350×350 мм</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Акриловый бокс FU-AGB-900W')">Запросить цену</button>
+      </div>
+    </div>
+
+    <div class="cat-sub">Эксикаторы лабораторные</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-DS-300</div>
+        <h4>Эксикатор лабораторный DS-300</h4>
+        <p>Полипропиленовый эксикатор для хранения образцов и реагентов в условиях пониженной влажности. Силиконовая прокладка обеспечивает герметичность. Кран для подключения к вакуумной линии. Подходит для порошков, гигроскопичных солей и органических соединений.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Внутренний Ø</span><span>300 мм</span></div>
+          <div class="cat-c-spec"><span>Материал</span><span>Полипропилен (PP)</span></div>
+          <div class="cat-c-spec"><span>Объём</span><span>~10 л</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Эксикатор FU-DS-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-DS-500V</div>
+        <h4>Вакуумный эксикатор DS-500V</h4>
+        <p>Вакуумный эксикатор большого объёма из нержавеющей стали с иллюминатором из закалённого стекла. Встроенный вакуумметр. Подходит для дегазации образцов и длительного хранения в вакууме до 10⁻² мбар.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Внутренний Ø</span><span>500 мм</span></div>
+          <div class="cat-c-spec"><span>Вакуум</span><span>до 10⁻² мбар</span></div>
+          <div class="cat-c-spec"><span>Материал</span><span>AISI 304</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Вакуумный эксикатор FU-DS-500V')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2. ЭЛЕКТРОННЫЕ МИКРОСКОПЫ ── -->
+  <div class="cat-section" id="cat-sem">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 02</div>
+        <div class="cat-title">Электронные микроскопы</div>
+        <div class="cat-desc">Сканирующие, просвечивающие, двулучевые и настольные системы для нанометрового анализа</div>
+      </div>
+      <div class="cat-count">8 позиций</div>
+    </div>
+
+    <div class="cat-sub">Сканирующие электронные микроскопы (СЭМ)</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-SM60</div>
+        <h4>СЭМ высокого разрешения SM-60</h4>
+        <p>Сканирующий электронный микроскоп с холодным полевым катодом и максимальным разрешением 1.3 нм при 15 кВ. Скорость сканирования до 2×100 Мпикс/с. Для задач материаловедения, полупроводниковой инженерии и контроля качества нанотехнологических изделий.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>1.3 нм (15 кВ)</span></div>
+          <div class="cat-c-spec"><span>Ускоряющее напряжение</span><span>0.1–30 кВ</span></div>
+          <div class="cat-c-spec"><span>Детекторы</span><span>SE, BSE, EBSD, EDX</span></div>
+          <div class="cat-c-spec"><span>Скорость</span><span>2×100 Мпикс/с</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('СЭМ FU-SM60')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-SM40X</div>
+        <h4>СЭМ с термополевым катодом SM-40X</h4>
+        <p>Сканирующий ЭМ с Шоттки-катодом (термополевая эмиссия). Разрешение менее 1.5 нм при 1 кВ — оптимален для анализа покрытий и диэлектриков без напыления проводящего слоя. Поддержка режима низкого вакуума (VP) для влажных образцов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>&lt;1.5 нм (1 кВ)</span></div>
+          <div class="cat-c-spec"><span>Катод</span><span>Schottky FEG</span></div>
+          <div class="cat-c-spec"><span>Режим VP</span><span>10–650 Па</span></div>
+          <div class="cat-c-spec"><span>Ускоряющее напряжение</span><span>0.5–30 кВ</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('СЭМ FU-SM40X')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-SM33</div>
+        <h4>СЭМ с водяным охлаждением SM-33</h4>
+        <p>Стабилизированная система с составной электромагнитной линзой и водяным охлаждением объектива. Встроенная навигационная камера для быстрого позиционирования. Минимальный дрейф луча при длительных экспериментах (EBSD-картирование).</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>2.0 нм (20 кВ)</span></div>
+          <div class="cat-c-spec"><span>Стабильность луча</span><span>&lt;1 нм/ч</span></div>
+          <div class="cat-c-spec"><span>Детекторы</span><span>SE, BSE, EDX, EBSD</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('СЭМ FU-SM33')">Запросить цену</button>
+      </div>
+    </div>
+
+    <div class="cat-sub">Настольные СЭМ</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-ZEM-ULTRA</div>
+        <h4>Настольный СЭМ ZEM Ultra</h4>
+        <p>Высокопроизводительный настольный сканирующий микроскоп с полевым катодом Шоттки. Срок службы источника электронов — до 5 лет без замены. Встроенный EDX-детектор, автофокус, автоматическое определение яркости и контраста. Не требует отдельного помещения.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>3 нм (15 кВ)</span></div>
+          <div class="cat-c-spec"><span>Увеличение</span><span>×15 — ×300 000</span></div>
+          <div class="cat-c-spec"><span>Катод</span><span>Schottky FEG</span></div>
+          <div class="cat-c-spec"><span>Габариты</span><span>730×490×670 мм</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Настольный СЭМ FU-ZEM-ULTRA')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-ZEM-20PRO</div>
+        <h4>Настольный СЭМ ZEM 20 Pro</h4>
+        <p>Бюджетный настольный СЭМ с вольфрамовым катодом для рутинной лабораторной аналитики. Разрешение 5 нм при увеличении 200 000×, встроенный EDX. Программное управление через ПК, интуитивный интерфейс, минимальное обслуживание. Производство Phenom-World.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>5 нм (200 кВ)</span></div>
+          <div class="cat-c-spec"><span>Увеличение</span><span>до ×200 000</span></div>
+          <div class="cat-c-spec"><span>Катод</span><span>CeB₆ / W</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Настольный СЭМ FU-ZEM-20PRO')">Запросить цену</button>
+      </div>
+    </div>
+
+    <div class="cat-sub">Просвечивающие и двулучевые</div>
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-TEM-300</div>
+        <h4>Просвечивающий ЭМ TEM-300</h4>
+        <p>Просвечивающий электронный микроскоп для атомарного разрешения кристаллических структур. Поддержка STEM (HAADF, BF/DF), нанодифракции и картирования элементного состава методом EDX/EELS. Для задач материаловедения, катализа и биологии.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>0.12 нм (точка)</span></div>
+          <div class="cat-c-spec"><span>Напряжение</span><span>80 / 200 / 300 кВ</span></div>
+          <div class="cat-c-spec"><span>STEM режим</span><span>HAADF, BF, DF</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('ПЭМ FU-TEM-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-FIB-30</div>
+        <h4>Двулучевой микроскоп FIB-SEM</h4>
+        <p>Комбинированная система ионного и электронного пучков для нанопрепарирования ламелей ПЭМ, 3D-томографии и прямой записи наноструктур. Ионный пучок Ga⁺ с разрешением до 5 нм. Платиновое и вольфрамовое напыление in-situ.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>СЭМ разрешение</span><span>1.5 нм (15 кВ)</span></div>
+          <div class="cat-c-spec"><span>FIB разрешение</span><span>5 нм (30 кВ)</span></div>
+          <div class="cat-c-spec"><span>Ион</span><span>Ga⁺</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('FIB-SEM FU-FIB-30')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 3. ОПТИЧЕСКИЕ МИКРОСКОПЫ ── -->
+  <div class="cat-section" id="cat-opt">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 03</div>
+        <div class="cat-title">Оптические микроскопы</div>
+        <div class="cat-desc">Металлографические, конфокальные, цифровые, поляризационные и стереомикроскопы</div>
+      </div>
+      <div class="cat-count">7 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-M200-MET</div>
+        <h4>Металлографический микроскоп M200</h4>
+        <p>Прямой металлографический микроскоп с планахроматическими объективами (5×, 10×, 20×, 50×, 100×). Освещение в отражённом поляризованном и неполяризованном свете. Моторизованный предметный столик с программным управлением. Для контроля микроструктуры металлов, сплавов и покрытий.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>50×–1000×</span></div>
+          <div class="cat-c-spec"><span>Столик</span><span>160×160 мм, моториз.</span></div>
+          <div class="cat-c-spec"><span>Источник</span><span>LED 6500K</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Металлографический микроскоп FU-M200-MET')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-M300-INV</div>
+        <h4>Инвертированный микроскоп M300</h4>
+        <p>Инвертированный металлографический микроскоп для анализа крупногабаритных необработанных образцов. Объективы с длинным рабочим расстоянием (5× LWD до 100× LWD). ДИК-контраст, эпифлуоресценция опционально. Применяется в чёрной и цветной металлургии.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>25×–1000×</span></div>
+          <div class="cat-c-spec"><span>Рабочее расстояние</span><span>до 34 мм (5×)</span></div>
+          <div class="cat-c-spec"><span>Контраст</span><span>Яркое поле / ДИК</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Инвертированный микроскоп FU-M300-INV')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-M150-POL</div>
+        <h4>Поляризационный микроскоп M150</h4>
+        <p>Поляризационный микроскоп для анализа оптически анизотропных материалов: минералов, керамик, полимеров и шлифов. Вращающийся предметный столик, компенсатор Бертрана, анализатор и поляризатор. Для петрографии, геологии и материаловедения.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>40×–600×</span></div>
+          <div class="cat-c-spec"><span>Столик</span><span>вращающийся, 360°</span></div>
+          <div class="cat-c-spec"><span>Компенсатор</span><span>λ, λ/4, клиновой</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Поляризационный микроскоп FU-M150-POL')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-DMSZ-DIG</div>
+        <h4>Цифровой микроскоп DMSZ</h4>
+        <p>Цифровой микроскоп с телецентрической оптической системой и встроенной камерой 20 Мпикс. Бесступенчатое увеличение, свободный угол наклона головы 0–90°. Встроенное ПО для измерений, шероховатости и 3D-профилей поверхности без физического контакта.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>20×–500×</span></div>
+          <div class="cat-c-spec"><span>Камера</span><span>20 Мпикс CMOS</span></div>
+          <div class="cat-c-spec"><span>3D-профиль</span><span>Z-stack фокусировка</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Цифровой микроскоп FU-DMSZ-DIG')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-VT6100-CONF</div>
+        <h4>Конфокальный микроскоп VT6100</h4>
+        <p>Конфокальный лазерный сканирующий микроскоп с увеличением до 17 280× и Z-разрешением 0.1 мкм. Четыре лазерных канала (405/488/561/638 нм). Опциональный модуль TIRF, FRAP, FRET. Применяется в биологии, материаловедении и контроле нанопокрытий.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>до ×17 280</span></div>
+          <div class="cat-c-spec"><span>Z-разрешение</span><span>0.1 мкм</span></div>
+          <div class="cat-c-spec"><span>Лазеры</span><span>405/488/561/638 нм</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Конфокальный микроскоп FU-VT6100-CONF')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-ST40-STEREO</div>
+        <h4>Стереомикроскоп ST-40</h4>
+        <p>Зум-стереомикроскоп с апохроматической оптикой для объёмного наблюдения непрозрачных образцов, монтажа, препарирования и первичного контроля. Большое рабочее расстояние (100 мм), кольцевая светодиодная подсветка.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Увеличение</span><span>8×–80× (зум)</span></div>
+          <div class="cat-c-spec"><span>Рабочее расстояние</span><span>100 мм</span></div>
+          <div class="cat-c-spec"><span>Поле зрения</span><span>до 32 мм</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Стереомикроскоп FU-ST40-STEREO')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-AIS-PRO</div>
+        <h4>Система анализа изображений AIS Pro</h4>
+        <p>Программный комплекс для количественной металлографии и анализа микроструктуры. Определение размера зерна (ASTM E112), объёмной доли фаз, включений, пор. Автоматическое сравнение с эталонными шкалами по ГОСТ/ISO. Совместим с любым микроскопом.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Анализ зерна</span><span>ASTM E112 / ГОСТ</span></div>
+          <div class="cat-c-spec"><span>Включения</span><span>ASTM E45</span></div>
+          <div class="cat-c-spec"><span>Камера</span><span>до 25 Мпикс</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Система анализа FU-AIS-PRO')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 4. ПОДГОТОВКА ОБРАЗЦОВ ── -->
+  <div class="cat-section" id="cat-prep">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 04</div>
+        <div class="cat-title">Подготовка образцов</div>
+        <div class="cat-desc">Отрезные станки, шлифовально-полировальное оборудование, заливка, напыление и ионная полировка</div>
+      </div>
+      <div class="cat-count">6 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-CUT-200</div>
+        <h4>Отрезной станок CUT-200</h4>
+        <p>Прецизионный отрезной станок с диском Ø200 мм для подготовки металлических, керамических и полимерных образцов. Принудительная водяная подача СОЖ, плавная регулировка скорости подачи. Поставляется с набором отрезных дисков для различных материалов. Производство Struers.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диск</span><span>Ø200 мм</span></div>
+          <div class="cat-c-spec"><span>Подача</span><span>0.01–5 мм/с</span></div>
+          <div class="cat-c-spec"><span>Скорость</span><span>700–3000 об/мин</span></div>
+          <div class="cat-c-spec"><span>Макс. образец</span><span>75×65 мм</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Отрезной станок FU-CUT-200')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-MP-300A</div>
+        <h4>Шлиф.-полировальный станок MP-300A</h4>
+        <p>Автоматический шлифовально-полировальный станок с дисками Ø300 мм. Одновременная обработка до 6 образцов в головке с индивидуальным прижимом. Программируемые режимы шлифовки и полировки с контролем силы и времени. Производство Struers.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диск</span><span>Ø300 мм</span></div>
+          <div class="cat-c-spec"><span>Образцов</span><span>до 6 одновременно</span></div>
+          <div class="cat-c-spec"><span>Скорость</span><span>50–600 об/мин</span></div>
+          <div class="cat-c-spec"><span>Сила прижима</span><span>5–50 Н/образец</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Шлифовально-полировальный станок FU-MP-300A')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-MX-30</div>
+        <h4>Установка горячей запрессовки MX-30</h4>
+        <p>Автоматическая установка для горячей запрессовки образцов в смолу (бакелит, резин). Диаметр пресс-форм 25, 30, 40 мм. Программируемые профили давления и температуры с LCD-дисплеем. Чистое водяное охлаждение пресс-формы встроено.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диаметр</span><span>25 / 30 / 40 мм</span></div>
+          <div class="cat-c-spec"><span>Давление</span><span>до 250 бар</span></div>
+          <div class="cat-c-spec"><span>Температура</span><span>до 200 °C</span></div>
+          <div class="cat-c-spec"><span>Цикл</span><span>~6 мин</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Установка запрессовки FU-MX-30')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-SC-150</div>
+        <h4>Напылитель проводящих слоёв SC-150</h4>
+        <p>Вакуумный напылитель для нанесения проводящих покрытий (Au, Pt, Ir, C) на непроводящие образцы перед электронной микроскопией. Управляемый магнетрон, рабочий вакуум 10⁻² мбар, толщина покрытия 1–100 нм.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Материалы</span><span>Au, Pt, Ir, C</span></div>
+          <div class="cat-c-spec"><span>Толщина</span><span>1–100 нм</span></div>
+          <div class="cat-c-spec"><span>Вакуум</span><span>10⁻² мбар</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Напылитель FU-SC-150')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-IPS-5</div>
+        <h4>Система ионной полировки IPS-5</h4>
+        <p>Прецизионная ионная система для финишной полировки ламелей и поперечных сечений перед СЭМ/ПЭМ анализом. Двойной ионный пучок Ar⁺ (угол 0–10°, напряжение 100–6000 В). Криоохлаждение для полимеров и биологических образцов опционально.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Ион</span><span>Ar⁺</span></div>
+          <div class="cat-c-spec"><span>Напряжение</span><span>100–6000 В</span></div>
+          <div class="cat-c-spec"><span>Угол</span><span>0–10°</span></div>
+          <div class="cat-c-spec"><span>Крио</span><span>опционально</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Ионная полировка FU-IPS-5')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-VD-260</div>
+        <h4>Вакуумный диспергатор порошков VD-260</h4>
+        <p>Система точной порошковой дозировки и диспергирования для подготовки порошковых образцов к анализу в СЭМ. Управляемый поток, регулируемое давление дисперсии, встроенный фильтр. Совместим с большинством СЭМ-систем через ISO-80 фланец.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Объём</span><span>5–500 мг</span></div>
+          <div class="cat-c-spec"><span>Давление</span><span>1–4 бар</span></div>
+          <div class="cat-c-spec"><span>Фланец</span><span>ISO-80</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Диспергатор FU-VD-260')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 5. ТВЕРДОМЕРЫ И ТРИБОЛОГИЯ ── -->
+  <div class="cat-section" id="cat-hard">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 05</div>
+        <div class="cat-title">Твердомеры и трибология</div>
+        <div class="cat-desc">Микро- и нанотвердомеры, трибометры, профилометры по методам Виккерса, Роквелла, Бринелля</div>
+      </div>
+      <div class="cat-count">7 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-VHT-2005C</div>
+        <h4>Микротвердомер Autovicky 2005C</h4>
+        <p>Автоматический микротвердомер Виккерса с моторизованным XY-столиком и программным картированием твёрдости. Автофокусировка, автоматическое распознавание отпечатка и расчёт HV. Статистические отчёты по ГОСТ 9450, ISO 6507. Нагрузки 10–2000 гс.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Нагрузка</span><span>10–2000 гс</span></div>
+          <div class="cat-c-spec"><span>Столик</span><span>100×100 мм, моториз.</span></div>
+          <div class="cat-c-spec"><span>Точность</span><span>±1% HV</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ГОСТ 9450, ISO 6507</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Микротвердомер FU-VHT-2005C')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-VHT-300</div>
+        <h4>Твердомер по Виккерсу VHT-300</h4>
+        <p>Стационарный твердомер Виккерса для среднего диапазона нагрузок. Автоматическое опускание индентора, встроенный оптический измерительный блок с цифровой камерой 5 Мпикс. Протоколы испытаний HV5–HV50. Поверхностный твёрдомер HR15N/HR30N опционально.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Нагрузка</span><span>5–50 кгс (HV)</span></div>
+          <div class="cat-c-spec"><span>Камера</span><span>5 Мпикс</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ISO 6507, ASTM E92</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Твердомер Виккерса FU-VHT-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-RHT-150</div>
+        <h4>Твердомер по Роквеллу RHT-150</h4>
+        <p>Универсальный твердомер Роквелла для методов HRA, HRB, HRC и 10 дополнительных шкал. Автоматическое цифровое отображение, статистический модуль. Управление через ПК опционально. Для входного и финального контроля деталей в машиностроении и инструментальном производстве.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Шкалы</span><span>HRA, B, C + 10 доп.</span></div>
+          <div class="cat-c-spec"><span>Нагрузка</span><span>60 / 100 / 150 кгс</span></div>
+          <div class="cat-c-spec"><span>Точность</span><span>±0.5 HR</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Твердомер Роквелла FU-RHT-150')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-BHT-3000</div>
+        <h4>Твердомер по Бринеллю BHT-3000</h4>
+        <p>Твердомер Бринелля с максимальной нагрузкой 3000 кгс. Встроенная CCD-камера и программная система BrinScan для автоматического измерения диаметра отпечатка и расчёта HBW. Поддержка шариков Ø1, 2.5, 5, 10 мм. Для литья, поковок и горячекатаного проката.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Нагрузка</span><span>до 3000 кгс</span></div>
+          <div class="cat-c-spec"><span>Шарики</span><span>Ø1/2.5/5/10 мм</span></div>
+          <div class="cat-c-spec"><span>Система</span><span>BrinScan (авто)</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Твердомер Бринелля FU-BHT-3000')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-NHT-2</div>
+        <h4>Нанотвердомер и скрэтч-тестер NHT-2</h4>
+        <p>Прецизионный инструмент для нанотвёрдости (метод Oliver–Pharr) и адгезионных скрэтч-тестов тонких плёнок и покрытий. Нагрузки 0.1–500 мН, разрешение по глубине 0.004 нм. Модули Е, H, пластичность, упругое восстановление.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Нагрузка</span><span>0.1–500 мН</span></div>
+          <div class="cat-c-spec"><span>Глубина</span><span>разрешение 0.004 нм</span></div>
+          <div class="cat-c-spec"><span>Метод</span><span>Oliver–Pharr</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Нанотвердомер FU-NHT-2')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-TBM-10</div>
+        <h4>Трибометр TBM-10</h4>
+        <p>Трибометр для измерения коэффициента трения и износостойкости по схемам «шар–диск», «пин–диск», «возвратно-поступательный». Диапазон нагрузок 0.01–10 Н, контролируемая температура среды до 500 °C. Для смазок, покрытий, биоматериалов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Нагрузка</span><span>0.01–10 Н</span></div>
+          <div class="cat-c-spec"><span>Темп. среды</span><span>RT–500 °C</span></div>
+          <div class="cat-c-spec"><span>Схемы</span><span>шар–диск, пин–диск</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Трибометр FU-TBM-10')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-PST-50</div>
+        <h4>Профилометр стилусный PST-50</h4>
+        <p>Стилусный профилометр для измерения шероховатости и волнистости поверхности. Диапазон Ra 0.005–100 мкм, длина трассы до 50 мм. Параметры Ra, Rz, Rq, Rt, Rsk, Rku по ISO 4287. Для входного контроля обработанных поверхностей деталей.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Ra диапазон</span><span>0.005–100 мкм</span></div>
+          <div class="cat-c-spec"><span>Длина</span><span>до 50 мм</span></div>
+          <div class="cat-c-spec"><span>Параметры</span><span>Ra, Rz, Rq, Rt…</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Профилометр FU-PST-50')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 6. АНАЛИЗАТОРЫ И СПЕКТРОМЕТРЫ ── -->
+  <div class="cat-section" id="cat-spec">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 06</div>
+        <div class="cat-title">Анализаторы и спектрометры</div>
+        <div class="cat-desc">XRF, XRD, OES, ICP, FTIR и Рамановские системы для химического и фазового анализа</div>
+      </div>
+      <div class="cat-count">8 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-XRF-ED4</div>
+        <h4>Портативный XRF-спектрометр ED4</h4>
+        <p>Ручной рентгенофлуоресцентный анализатор для быстрой идентификации марок стали, цветных сплавов и многокомпонентных материалов прямо на производстве. Определение 30+ элементов от Ti до U за 2–5 секунд без пробоподготовки. Промышленная защита IP54.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Элементы</span><span>Ti–U (30+)</span></div>
+          <div class="cat-c-spec"><span>Время анализа</span><span>2–5 сек</span></div>
+          <div class="cat-c-spec"><span>Защита</span><span>IP54</span></div>
+          <div class="cat-c-spec"><span>Питание</span><span>АКБ, 8 ч работы</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Портативный XRF FU-XRF-ED4')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-XRF-ED650R</div>
+        <h4>Стационарный XRF-спектрометр ED650R</h4>
+        <p>Энергодисперсионный рентгенофлуоресцентный спектрометр с автоматическим магазином на 88 проб. Элементы Na–U, пределы обнаружения от 1 мкг/г. Для контроля качества руд, цементов, нефтепродуктов и пищевых продуктов. Сертификат о поверке включён.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Элементы</span><span>Na–U</span></div>
+          <div class="cat-c-spec"><span>Магазин</span><span>88 проб</span></div>
+          <div class="cat-c-spec"><span>Предел обнаружения</span><span>от 1 мкг/г</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('XRF-спектрометр FU-XRF-ED650R')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-XRD-TD5000</div>
+        <h4>Рентгеновский дифрактометр TD-5000</h4>
+        <p>Монокристальный рентгеновский дифрактометр для определения параметров кристаллической решётки, фазового анализа и количественного фазового анализа по методу Ритвельда. Угловое разрешение 0.001° (2θ), CuKα-источник. Для металлов, керамик и фармацевтических субстанций.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Источник</span><span>CuKα (1.5406 Å)</span></div>
+          <div class="cat-c-spec"><span>Разрешение</span><span>0.001° (2θ)</span></div>
+          <div class="cat-c-spec"><span>Диапазон</span><span>0–160° (2θ)</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Дифрактометр FU-XRD-TD5000')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-OES-RX</div>
+        <h4>ОЭС-спектрометр Metavision RX</h4>
+        <p>Оптико-эмиссионный спектрометр для анализа масел и нефтепродуктов, определения содержания >33 элементов-примесей (Fe, Cu, Pb, Cr…). Применяется в диагностике износа двигателей и трансмиссий. Также доступна мобильная версия для выездного контроля.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Элементы</span><span>33+ (масло)</span></div>
+          <div class="cat-c-spec"><span>Диапазон</span><span>0.1–1000 мг/кг</span></div>
+          <div class="cat-c-spec"><span>Время</span><span>~30 сек/проба</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('ОЭС-спектрометр FU-OES-RX')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-ICP-900</div>
+        <h4>ICP-спектрометр iQ900</h4>
+        <p>Атомно-эмиссионный спектрометр с индуктивно-связанной плазмой. CCD-детектор увеличенной площади с покрытием 167–785 нм за один снимок. Одновременное определение 60+ элементов. Для воды, почв, биологических матриц и металлических растворов по EPA/ГОСТ методикам.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диапазон</span><span>167–785 нм</span></div>
+          <div class="cat-c-spec"><span>Элементы</span><span>60+ одновременно</span></div>
+          <div class="cat-c-spec"><span>ПО</span><span>0.1 мкг/л (типичный)</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('ICP-спектрометр FU-ICP-900')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-FTIR-300</div>
+        <h4>ИК-Фурье спектрометр FTIR-300</h4>
+        <p>Инфракрасный Фурье-спектрометр для идентификации органических и неорганических соединений, функциональных групп, примесей в полимерах. Разрешение 0.5 см⁻¹, диапазон 400–7500 см⁻¹. Модуль ATR (одиночного отражения), диффузного отражения DRIFT опционально.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диапазон</span><span>400–7500 см⁻¹</span></div>
+          <div class="cat-c-spec"><span>Разрешение</span><span>0.5 см⁻¹</span></div>
+          <div class="cat-c-spec"><span>Модуль</span><span>ATR, DRIFT</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('FTIR-спектрометр FU-FTIR-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-RAM-200</div>
+        <h4>Рамановский микроспектрометр RAM-200</h4>
+        <p>Конфокальный Рамановский микроспектрометр для анализа напряжений, идентификации фаз и картирования состава тонких плёнок, углеродных материалов (графен, CNT, алмаз) и биологических тканей. Лазеры 532/633/785 нм. Пространственное разрешение 0.3 мкм.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Лазеры</span><span>532 / 633 / 785 нм</span></div>
+          <div class="cat-c-spec"><span>Разрешение</span><span>0.3 мкм (xy)</span></div>
+          <div class="cat-c-spec"><span>Спектр</span><span>50–4000 см⁻¹</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Рамановский спектрометр FU-RAM-200')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-CS-300</div>
+        <h4>CS/ONH-анализатор CS-300</h4>
+        <p>Анализатор углерода, серы, кислорода, азота и водорода в металлах и сплавах методом сжигания/плавления. Диапазон C: 0.0001–100%, S: 0.0001–50%. Пиролизные и плавильные печи, чувствительные IR и TC-детекторы. По ГОСТ 12344, ASTM E1019.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Элементы</span><span>C, S, O, N, H</span></div>
+          <div class="cat-c-spec"><span>C-диапазон</span><span>0.0001–100%</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ГОСТ 12344, ASTM E1019</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('CS/ONH-анализатор FU-CS-300')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 7. ИСПЫТАТЕЛЬНОЕ ОБОРУДОВАНИЕ ── -->
+  <div class="cat-section" id="cat-test">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 07</div>
+        <div class="cat-title">Испытательное оборудование</div>
+        <div class="cat-desc">Электромеханические и сервогидравлические машины, маятниковые копры, климатические камеры</div>
+      </div>
+      <div class="cat-count">7 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-UTM-50E</div>
+        <h4>Электромеханическая испыт. машина UTM-50E</h4>
+        <p>Универсальная испытательная машина усилием 50 кН для статических испытаний на растяжение, сжатие, изгиб и сдвиг. Шариковинтовой привод, скорость 0.001–600 мм/мин, пространство между захватами 1000 мм. Комплект с управляющим ПО и пакетом захватов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Усилие</span><span>50 кН</span></div>
+          <div class="cat-c-spec"><span>Скорость</span><span>0.001–600 мм/мин</span></div>
+          <div class="cat-c-spec"><span>Ход</span><span>1000 мм</span></div>
+          <div class="cat-c-spec"><span>Точность</span><span>±0.5% (класс 0.5)</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Испытательная машина FU-UTM-50E')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-UTM-200E</div>
+        <h4>Электромеханическая испыт. машина UTM-200E</h4>
+        <p>Напольная двухколонная испытательная машина усилием 200 кН с двумя приводными шариковинтовыми парами и синхронизированным управлением. Пространство захватов 1500 мм. Опциональные модули усталости (до 10 Гц), высокотемпературные захваты до 1000 °C.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Усилие</span><span>200 кН</span></div>
+          <div class="cat-c-spec"><span>Ход</span><span>1500 мм</span></div>
+          <div class="cat-c-spec"><span>Темп. захваты</span><span>до 1000 °C</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Испытательная машина FU-UTM-200E')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-SHM-100</div>
+        <h4>Сервогидравлическая машина SHM-100</h4>
+        <p>Динамическая испытательная машина усилием ±100 кН для усталостных и циклических испытаний с частотой до 100 Гц. Синусоидальные, прямоугольные, случайные нагружения. Для авиационных, автомобильных и строительных материалов. По ГОСТ 25.502, ASTM E466.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Усилие</span><span>±100 кН</span></div>
+          <div class="cat-c-spec"><span>Частота</span><span>до 100 Гц</span></div>
+          <div class="cat-c-spec"><span>Режимы</span><span>синус / прямоугольник / случайный</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Сервогидравлическая машина FU-SHM-100')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-KM-300</div>
+        <h4>Маятниковый копёр KM-300</h4>
+        <p>Маятниковый копёр для испытаний на ударную вязкость (Шарпи и Изод). Энергия 300 Дж, прецизионная угловая шкала, электромагнитный захват. Соответствует ГОСТ 9454, ISO 148-1, ASTM E23. Автоматическая подача образцов опционально.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Энергия</span><span>300 Дж</span></div>
+          <div class="cat-c-spec"><span>Методы</span><span>Шарпи / Изод</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ГОСТ 9454, ISO 148-1</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Маятниковый копёр FU-KM-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-CCH-150</div>
+        <h4>Климатическая камера CCH-150</h4>
+        <p>Термовлажностная камера для испытаний на воздействие температуры (−70 … +180 °C) и влажности (10–98% RH). Полезный объём 150 л, скорость изменения температуры до 10 °C/мин. Программируемые профили до 999 шагов. Иллюминатор и розетки для подключения образцов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>−70 … +180 °C</span></div>
+          <div class="cat-c-spec"><span>Влажность</span><span>10–98% RH</span></div>
+          <div class="cat-c-spec"><span>Объём</span><span>150 л</span></div>
+          <div class="cat-c-spec"><span>Скорость</span><span>до 10 °C/мин</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Климатическая камера FU-CCH-150')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-EXT-25</div>
+        <h4>Экстензометр контактный EXT-25</h4>
+        <p>Прецизионный контактный экстензометр для измерения деформации при испытаниях на растяжение. База 25 мм, диапазон ±25 мм (100% деформации), класс точности 0.5 по ISO 9513. Подходит для металлов, полимеров, эластомеров. Высокотемпературный вариант до 1200 °C.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>База</span><span>25 мм</span></div>
+          <div class="cat-c-spec"><span>Диапазон</span><span>±25 мм</span></div>
+          <div class="cat-c-spec"><span>Класс</span><span>0.5 (ISO 9513)</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Экстензометр FU-EXT-25')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-HTF-1600</div>
+        <h4>Высокотемпературная печь HTF-1600</h4>
+        <p>Трубчатая высокотемпературная печь для термических испытаний и синтеза в контролируемой атмосфере (вакуум, Ar, N₂, H₂). Максимальная температура 1600 °C, нагревательные элементы MoSi₂. Скорость нагрева 0.1–100 °C/мин.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>до 1600 °C</span></div>
+          <div class="cat-c-spec"><span>Атмосфера</span><span>Ar, N₂, H₂, вакуум</span></div>
+          <div class="cat-c-spec"><span>Нагрев</span><span>0.1–100 °C/мин</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Высокотемпературная печь FU-HTF-1600')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 8. СИСТЕМЫ ТОМОГРАФИИ ── -->
+  <div class="cat-section" id="cat-tomo">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 08</div>
+        <div class="cat-title">Системы томографии</div>
+        <div class="cat-desc">Микро- и промышленная рентгеновская томография для неразрушающего контроля и 3D-анализа</div>
+      </div>
+      <div class="cat-count">4 позиции</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-MCT-100</div>
+        <h4>Микротомограф MCT-100</h4>
+        <p>Настольная система рентгеновской микротомографии для 3D-анализа пористости, трещин, включений и внутренней структуры образцов диаметром до 80 мм. Размер вокселя от 1 мкм. Источник 100 кВ / 100 Вт, плоский детектор 3Мпикс. Полный оборот за 10–60 минут.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Вокс. размер</span><span>от 1 мкм</span></div>
+          <div class="cat-c-spec"><span>Образец</span><span>до Ø80 мм</span></div>
+          <div class="cat-c-spec"><span>Источник</span><span>100 кВ / 100 Вт</span></div>
+          <div class="cat-c-spec"><span>Сканирование</span><span>10–60 мин</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Микротомограф FU-MCT-100')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-ICT-400</div>
+        <h4>Промышленный томограф ICT-400</h4>
+        <p>Крупноформатная система для контроля литых деталей, сборочных узлов и порошковых изделий диаметром до 400 мм. Рентгеновский источник 225 кВ / 450 кВ опционально. Автоматическое обнаружение дефектов по ISO 10893. Используется в аэрокосмической и автомобильной промышленности.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Образец</span><span>до Ø400 мм</span></div>
+          <div class="cat-c-spec"><span>Источник</span><span>225 / 450 кВ</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ISO 10893</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Промышленный томограф FU-ICT-400')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-COCT-200</div>
+        <h4>Томограф для кернов COCT-200</h4>
+        <p>Специализированная система для томографирования горных кернов диаметром 50–100 мм и длиной до 1 м. Непрерывное сканирование, определение пористости, трещиноватости, литологии. Применяется в нефтяной и горнодобывающей промышленности для цифрового керна.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Диаметр керна</span><span>50–100 мм</span></div>
+          <div class="cat-c-spec"><span>Длина</span><span>до 1 м</span></div>
+          <div class="cat-c-spec"><span>Режим</span><span>непрерывное сканирование</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Керновый томограф FU-COCT-200')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-PCB-CT</div>
+        <h4>Томограф для печатных плат PCB-CT</h4>
+        <p>Специализированный компьютерный томограф для контроля качества монтажа печатных плат: обнаружение холодной пайки, скрытых трещин, воздушных пор в паяных соединениях BGA, QFP. Разрешение 3 мкм, наклонное сканирование без демонтажа компонентов.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Разрешение</span><span>3 мкм</span></div>
+          <div class="cat-c-spec"><span>Применение</span><span>BGA, QFP, ПП</span></div>
+          <div class="cat-c-spec"><span>Угол</span><span>наклонное сканирование</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Томограф для ПП FU-PCB-CT')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 9. ТЕРМОАНАЛИЗ И РЕОЛОГИЯ ── -->
+  <div class="cat-section" id="cat-thermo">
+    <div class="cat-hdr">
+      <div class="cat-hdr-left">
+        <div class="cat-num">Категория 09</div>
+        <div class="cat-title">Термоанализ и реология</div>
+        <div class="cat-desc">TGA, DSC, дилатометры, реометры и калориметры для тепловых и реологических измерений</div>
+      </div>
+      <div class="cat-count">6 позиций</div>
+    </div>
+
+    <div class="cat-g">
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-TGA-500</div>
+        <h4>Термогравиметрический анализатор TGA-500</h4>
+        <p>ТГА для измерения изменения массы образца в зависимости от температуры и времени. Диапазон 25–1600 °C, чувствительность весов 0.1 мкг. Атмосфера Ar/N₂/O₂/воздух, скорость нагрева 0.01–100 °C/мин. Для деградации полимеров, синтеза керамик, анализа углерода.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>25–1600 °C</span></div>
+          <div class="cat-c-spec"><span>Чувствит. весов</span><span>0.1 мкг</span></div>
+          <div class="cat-c-spec"><span>Атмосфера</span><span>Ar, N₂, O₂, воздух</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('ТГА FU-TGA-500')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-DSC-200</div>
+        <h4>Дифференциальный сканирующий калориметр DSC-200</h4>
+        <p>ДСК для измерения тепловых эффектов (Tg, Tm, ΔHf, Тс) в полимерах, фармацевтических субстанциях, пищевых продуктах и металлах. Диапазон −180 … +550 °C (с криоблоком жидкого азота). Чувствительность 0.1 мкВт. Соответствует ISO 11357, ASTM E1356.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>−180 … +550 °C</span></div>
+          <div class="cat-c-spec"><span>Чувствительность</span><span>0.1 мкВт</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>ISO 11357, ASTM E1356</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('ДСК FU-DSC-200')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-DIL-500</div>
+        <h4>Дилатометр горизонтальный DIL-500</h4>
+        <p>Горизонтальный дилатометр для измерения линейного теплового расширения (КЛТР) металлов, керамик и стёкол. Диапазон 25–1600 °C, разрешение 1.25 нм. Определение фазовых превращений, усадки при спекании. Вакуум или инертная атмосфера.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>25–1600 °C</span></div>
+          <div class="cat-c-spec"><span>Разрешение</span><span>1.25 нм</span></div>
+          <div class="cat-c-spec"><span>Атмосфера</span><span>вакуум / Ar / N₂</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Дилатометр FU-DIL-500')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-RHM-100</div>
+        <h4>Реометр вращательный RHM-100</h4>
+        <p>Вращательный реометр с нормальной силой до 50 Н для характеристики вязкоупругих жидкостей, полимерных расплавов, гелей и суспензий. Геометрии: конус–пластина, цилиндр, пластина–пластина. Температура среды −40 … +400 °C. Режимы ротация, осцилляция, ползучесть.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>−40 … +400 °C</span></div>
+          <div class="cat-c-spec"><span>Момент</span><span>0.01–200 мН·м</span></div>
+          <div class="cat-c-spec"><span>Режимы</span><span>ротация, осцилляция</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Реометр FU-RHM-100')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-CAL-300</div>
+        <h4>Реакционный калориметр CAL-300</h4>
+        <p>Изотермический реакционный калориметр адиабатического типа для измерения тепловых эффектов химических реакций, смешивания и растворения. Чувствительность 1 мДж/г. Объём ячейки 50–500 мл. Для разработки безопасных технологических процессов (runaway-тесты).</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Чувствительность</span><span>1 мДж/г</span></div>
+          <div class="cat-c-spec"><span>Объём</span><span>50–500 мл</span></div>
+          <div class="cat-c-spec"><span>Тип</span><span>адиабатический</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Реакционный калориметр FU-CAL-300')">Запросить цену</button>
+      </div>
+      <div class="cat-c rv">
+        <div class="cat-c-model">FU-BAC-420</div>
+        <h4>Калориметр для аккумуляторов BAC-420</h4>
+        <p>Адиабатический калориметр для тестирования тепловой безопасности литиевых и других аккумуляторных элементов. Диапазон температур до 300 °C. Тест ARC (Accelerating Rate Calorimetry). Применяется при сертификации аккумуляторных модулей по UN38.3, IEC 62133.</p>
+        <div class="cat-c-specs">
+          <div class="cat-c-spec"><span>Температура</span><span>до 300 °C</span></div>
+          <div class="cat-c-spec"><span>Метод</span><span>ARC</span></div>
+          <div class="cat-c-spec"><span>Стандарт</span><span>UN38.3, IEC 62133</span></div>
+        </div>
+        <button class="cat-c-btn" onclick="openModal('Калориметр для АКБ FU-BAC-420')">Запросить цену</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /catalog -->
+
+<!-- ═══════ PRODUCT DETAIL ═══════ -->
+<div id="pd">
+  <div class="in">
+    <div class="sec-lbl">Пример продукции</div>
+    <h2 class="sec-h2">Перчаточный бокс FEED-UP GB-1200</h2>
+    <div class="pd-g">
+      <div class="pd-view">
+        <canvas id="prod-canvas"></canvas>
+        <div class="pd-hint">🖱 Вращайте мышью</div>
+      </div>
+      <div class="rv">
+        <div class="pd-model">Модель: FU-GB-1200-PRO</div>
+        <div class="pd-h2">Перчаточный бокс GB-1200</div>
+        <p class="pd-p">Перчаточный бокс FEED-UP GB-1200 предназначен для проведения работ в инертной атмосфере с содержанием кислорода и влаги менее 1 ppm. Корпус из нержавеющей стали AISI 316L с антистатическим покрытием, двойной шлюз (передний и боковой), встроенная система рециркуляции газа с двумя колонками очистки и автоматическим регенератором.</p>
+        <p class="pd-p">Применяется при синтезе чувствительных соединений, работе с литиевыми аккумуляторами, хранении реагентов и сборке устройств в сфере фармацевтики, электроники и материаловедения.</p>
+        <div class="specs">
+          <div class="spec"><div class="spec-l">Остаточный O₂</div><div class="spec-v">&lt; 1 ppm</div></div>
+          <div class="spec"><div class="spec-l">Остаточный H₂O</div><div class="spec-v">&lt; 1 ppm</div></div>
+          <div class="spec"><div class="spec-l">Рабочий объём</div><div class="spec-v">1200×600×600 мм</div></div>
+          <div class="spec"><div class="spec-l">Перчаточные порты</div><div class="spec-v">2 × Ø 150 мм</div></div>
+          <div class="spec"><div class="spec-l">Материал корпуса</div><div class="spec-v">AISI 316L</div></div>
+          <div class="spec"><div class="spec-l">Шлюз (антикамера)</div><div class="spec-v">Ø 250 мм</div></div>
+          <div class="spec"><div class="spec-l">Рабочий газ</div><div class="spec-v">Ar, N₂ (99.999%)</div></div>
+          <div class="spec"><div class="spec-l">Избыточное давление</div><div class="spec-v">0–20 мбар</div></div>
+        </div>
+        <div class="pd-btns">
+          <button class="btn-p" onclick="openModal('Перчаточный бокс FEED-UP GB-1200')">Запросить цену</button>
+          <a href="#" class="btn-s">Паспорт (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ METHODS ═══════ -->
+<section id="methods" class="sec">
+  <div class="sec-lbl">Методы анализа</div>
+  <h2 class="sec-h2">Физико-химические методы<br>исследования материалов</h2>
+  <p class="sec-desc">Поставляемое оборудование охватывает полный спектр современных аналитических и испытательных методов — от нанометрового разрешения до промышленного контроля.</p>
+  <div class="meth-g">
+
+    <!-- 1. Электронная микроскопия -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="meth-abbr">СЭМ · ПЭМ · EBSD · FIB</div>
+      <h3>Электронная микроскопия</h3>
+      <p>Визуализация поверхности и объёма образца с разрешением до 0.8 нм. EBSD — картирование кристаллографической текстуры; FIB — прецизионная подготовка ламелей.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Разрешение</span><span class="meth-v">0.8 нм (СЭМ) / 0.07 нм (ПЭМ)</span></div>
+        <div class="meth-param"><span class="meth-k">Ускоряющее напряжение</span><span class="meth-v">0.1 – 30 кВ</span></div>
+        <div class="meth-param"><span class="meth-k">Детекторы EDX/WDX</span><span class="meth-v">Z ≥ 4 (Be) — 92 (U)</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Наноструктуры</span>
+        <span class="meth-tag">Покрытия и тонкие плёнки</span>
+        <span class="meth-tag">Текстурный анализ</span>
+      </div>
+    </div>
+
+    <!-- 2. XRD -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="meth-abbr">XRD · SAXS · PDF · Stress</div>
+      <h3>Рентгеновская дифракция (XRD)</h3>
+      <p>Фазовый анализ многокомпонентных систем, уточнение параметров кристаллической решётки по методу Ривельда, измерение остаточных напряжений и размеров областей когерентного рассеяния.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Диапазон 2θ</span><span class="meth-v">5° – 165°</span></div>
+        <div class="meth-param"><span class="meth-k">Точность позиции пика</span><span class="meth-v">≤ 0.01°</span></div>
+        <div class="meth-param"><span class="meth-k">Детекторы</span><span class="meth-v">1D LYNXEYE / 2D VÅNTEC</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Фазовый анализ</span>
+        <span class="meth-tag">Остаточные напряжения</span>
+        <span class="meth-tag">Размер кристаллитов</span>
+      </div>
+    </div>
+
+    <!-- 3. XRF -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div class="meth-abbr">WDXRF · EDXRF · μ-XRF · TXRF</div>
+      <h3>Рентгенофлуоресцентный анализ (XRF)</h3>
+      <p>Неразрушающий элементный анализ твёрдых тел, порошков и жидкостей. μ-XRF обеспечивает картирование состава с пространственным разрешением от 25 мкм.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Диапазон элементов</span><span class="meth-v">Na (11) – U (92)</span></div>
+        <div class="meth-param"><span class="meth-k">Чувствительность</span><span class="meth-v">от 1 мг/кг</span></div>
+        <div class="meth-param"><span class="meth-k">Время анализа</span><span class="meth-v">2 – 10 мин</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Входной контроль</span>
+        <span class="meth-tag">Геологоразведка</span>
+        <span class="meth-tag">Картирование состава</span>
+      </div>
+    </div>
+
+    <!-- 4. Механические испытания -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 7v5l3 3"/></svg></div>
+      <div class="meth-abbr">Твёрдость · Растяжение · Усталость · Трибология</div>
+      <h3>Механические испытания</h3>
+      <p>Определение твёрдости по Виккерсу, Бринеллю, Роквеллу и Кнупу; испытания на растяжение, сжатие, изгиб и усталость; трибологические испытания на трение и износ по ISO/ASTM/ГОСТ.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Максимальная нагрузка</span><span class="meth-v">до 600 кН</span></div>
+        <div class="meth-param"><span class="meth-k">Индентор (микротвёрдость)</span><span class="meth-v">5 мН – 30 Н</span></div>
+        <div class="meth-param"><span class="meth-k">Нормативная база</span><span class="meth-v">ГОСТ, ISO, ASTM, EN</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Сертификация продукции</span>
+        <span class="meth-tag">Материаловедение</span>
+        <span class="meth-tag">Нанотвёрдость</span>
+      </div>
+    </div>
+
+    <!-- 5. Оптическая металлография -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg></div>
+      <div class="meth-abbr">Светлое поле · ДИК · Поляризация · Авторадиография</div>
+      <h3>Оптическая металлография</h3>
+      <p>Анализ микроструктуры в отражённом и поляризованном свете, количественная металлография по ГОСТ 5639, определение балла зерна, размера и формы включений с автоматизированной обработкой изображений.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Увеличение</span><span class="meth-v">×10 – ×2000</span></div>
+        <div class="meth-param"><span class="meth-k">Разрешение камеры</span><span class="meth-v">до 36 Мпикс</span></div>
+        <div class="meth-param"><span class="meth-k">Автоанализ</span><span class="meth-v">AnalySIS, LAS</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Балл зерна</span>
+        <span class="meth-tag">Неметаллические включения</span>
+        <span class="meth-tag">Глубина обезуглероживания</span>
+      </div>
+    </div>
+
+    <!-- 6. Рамановская спектроскопия -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+      <div class="meth-abbr">Raman · SERS · TERS · Картирование</div>
+      <h3>Рамановская спектроскопия</h3>
+      <p>Идентификация органических и неорганических соединений по спектральному «отпечатку», анализ фазового состава, картирование распределения компонентов в гетерогенных системах.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Спектральный диапазон</span><span class="meth-v">50 – 3500 см⁻¹</span></div>
+        <div class="meth-param"><span class="meth-k">Пространственное разрешение</span><span class="meth-v">0.5 мкм</span></div>
+        <div class="meth-param"><span class="meth-k">Лазеры</span><span class="meth-v">532 / 633 / 785 нм</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Углеродные материалы</span>
+        <span class="meth-tag">Напряжения в плёнках</span>
+        <span class="meth-tag">Фармацевтика</span>
+      </div>
+    </div>
+
+    <!-- 7. Термический анализ -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+      <div class="meth-abbr">TGA · DSC · DTA · TMA · DIL</div>
+      <h3>Термический анализ</h3>
+      <p>Изучение тепловых эффектов, потери массы и термомеханического поведения материалов в широком температурном диапазоне. Незаменим для исследования полимеров, керамик и интерметаллидов.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Температурный диапазон</span><span class="meth-v">−150°C – +1650°C</span></div>
+        <div class="meth-param"><span class="meth-k">Чувствительность весов (TGA)</span><span class="meth-v">0.1 мкг</span></div>
+        <div class="meth-param"><span class="meth-k">Скорость нагрева</span><span class="meth-v">0.001 – 100 К/мин</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Полимеры и эластомеры</span>
+        <span class="meth-tag">Фазовые переходы</span>
+        <span class="meth-tag">Огнестойкость</span>
+      </div>
+    </div>
+
+    <!-- 8. Микро-КТ томография -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="21"/><line x1="3" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="21" y2="12"/></svg></div>
+      <div class="meth-abbr">Micro-CT · Nano-CT · 3D-реконструкция</div>
+      <h3>Рентгеновская томография</h3>
+      <p>Неразрушающее 3D-сканирование внутренней структуры образца. Визуализация пор, трещин, включений и плотности без разрезания — незаменимо для аддитивного производства и авиакосмической отрасли.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Разрешение вокселя</span><span class="meth-v">от 0.5 мкм</span></div>
+        <div class="meth-param"><span class="meth-k">Максимальный образец</span><span class="meth-v">Ø 300 мм</span></div>
+        <div class="meth-param"><span class="meth-k">Напряжение трубки</span><span class="meth-v">40 – 225 кВ</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Аддитивное производство</span>
+        <span class="meth-tag">Пористость и дефекты</span>
+        <span class="meth-tag">Обратное проектирование</span>
+      </div>
+    </div>
+
+    <!-- 9. FTIR-спектроскопия -->
+    <div class="meth-c rv">
+      <div class="meth-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M8.5 3v6L4 17a2 2 0 0 0 1.9 2.8h12.2A2 2 0 0 0 20 17L15.5 9V3"/><line x1="6.5" y1="14" x2="17.5" y2="14"/></svg></div>
+      <div class="meth-abbr">FTIR · ATR · Микро-FTIR · NIR</div>
+      <h3>ИК-Фурье-спектроскопия (FTIR)</h3>
+      <p>Идентификация функциональных групп, определение степени кристалличности полимеров, анализ загрязнений и деградации. ATR-приставка позволяет исследовать поверхность без подготовки образца.</p>
+      <div class="meth-params">
+        <div class="meth-param"><span class="meth-k">Спектральный диапазон</span><span class="meth-v">4000 – 400 см⁻¹ (MIR)</span></div>
+        <div class="meth-param"><span class="meth-k">Разрешение</span><span class="meth-v">0.5 – 4 см⁻¹</span></div>
+        <div class="meth-param"><span class="meth-k">Режимы</span><span class="meth-v">ATR · Пропускание · Диффузное</span></div>
+      </div>
+      <div class="meth-tags">
+        <span class="meth-tag">Идентификация полимеров</span>
+        <span class="meth-tag">Анализ примесей</span>
+        <span class="meth-tag">Контроль качества</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════ SERVICE ═══════ -->
+<div id="svc">
+  <div class="in">
+    <div class="svc-g">
+      <div>
+        <div class="sec-lbl">Сервис</div>
+        <h2 class="sec-h2">Полное сервисное сопровождение</h2>
+        <p style="color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:32px">Собственный сервисный центр FEED-UP обеспечивает весь жизненный цикл оборудования — от первичной инсталляции до плановых ТО и аварийного ремонта с выездом на объект.</p>
+        <ul class="svc-list">
+          <li class="rv"><span class="svc-n">01</span><div><h4>Монтаж и пусконаладка</h4><p>Профессиональная инсталляция с проверкой всех параметров и составлением протокола ввода в эксплуатацию.</p></div></li>
+          <li class="rv"><span class="svc-n">02</span><div><h4>Обучение персонала</h4><p>Практические курсы для операторов и технических специалистов. Очный и онлайн форматы.</p></div></li>
+          <li class="rv"><span class="svc-n">03</span><div><h4>Плановое техобслуживание</h4><p>Регулярные ТО по регламенту производителя, профилактика отказов, замена расходных частей.</p></div></li>
+          <li class="rv"><span class="svc-n">04</span><div><h4>Аварийный ремонт</h4><p>Выезд инженера в течение 24 часов по Москве и МО, удалённая диагностика в реальном времени.</p></div></li>
+        </ul>
+      </div>
+      <div class="stat-g">
+        <div class="stat-c rv"><span class="stat-n">250<sup style="font-size:18px">+</sup></span><span class="stat-l">единиц установленного оборудования</span></div>
+        <div class="stat-c rv"><span class="stat-n">15</span><span class="stat-l">сертифицированных инженеров</span></div>
+        <div class="stat-c rv"><span class="stat-n">24h</span><span class="stat-l">время реакции на аварийный вызов</span></div>
+        <div class="stat-c rv"><span class="stat-n">98<sup style="font-size:18px">%</sup></span><span class="stat-l">клиентов продлевают сервисный контракт</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ ABOUT ═══════ -->
+<section id="about" class="sec">
+  <div class="sec-lbl">О компании</div>
+  <h2 class="sec-h2">FEED-UP — ваш надёжный партнёр</h2>
+  <div class="abt-g">
+    <div class="abt-t rv">
+      <p>FEED-UP — российская компания, специализирующаяся на поставках высокоточного аналитического и лабораторного оборудования для научно-исследовательских организаций, университетов и промышленных предприятий.</p>
+      <p>Мы сотрудничаем с ведущими мировыми производителями и обеспечиваем полный цикл: от технического консалтинга и подбора конфигурации — до монтажа, обучения и долгосрочного сервисного обслуживания.</p>
+      <p>В нашем портфеле — оборудование для электронной микроскопии, рентгеновского анализа, металлографии, работы в инертной атмосфере и механических испытаний.</p>
+      <ul class="abt-f">
+        <li>Официальные дистрибьюторы мировых брендов</li>
+        <li>Склад запасных частей и расходных материалов в Москве</li>
+        <li>Аккредитованный сервисный центр производителей</li>
+        <li>Поставки в рамках 44-ФЗ и 223-ФЗ (тендеры)</li>
+        <li>Лизинг и рассрочка на оборудование</li>
+      </ul>
+    </div>
+    <div class="abt-vis rv">
+      <div class="abt-stat"><div class="n">10<span>+</span></div><div class="l">лет на рынке</div></div>
+      <div class="abt-stat"><div class="n">120<span>+</span></div><div class="l">клиентов по всей России</div></div>
+      <div class="abt-stat"><div class="n">6</div><div class="l">ведущих партнёров-производителей</div></div>
+      <div class="abt-stat"><div class="n">500<span>+</span></div><div class="l">выполненных проектов</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ REQUEST ═══════ -->
+<div id="req">
+  <div class="in">
+    <div class="req-info rv">
+      <div class="sec-lbl">Заявки</div>
+      <h2 class="sec-h2">Оставьте заявку на оборудование</h2>
+      <p>Заполните форму — наш специалист свяжется с вами в течение рабочего дня, уточнит требования и подготовит индивидуальное коммерческое предложение.</p>
+      <div class="ci-list">
+        <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.74 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.74 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ci-l">Телефон</div><div class="ci-t">+7 (495) 123-45-67</div></div></div>
+        <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ci-l">Email</div><div class="ci-t eml" data-n="sales" data-d="feed-up.ru"></div></div></div>
+        <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><div class="ci-l">WhatsApp / Telegram</div><div class="ci-t">+7 (985) 123-45-67</div></div></div>
+      </div>
+    </div>
+    <div class="req-form rv">
+      <div id="page-form">
+        <!-- honeypot: боты заполнят, люди — нет -->
+        <input type="text" name="honey" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="f-row">
+          <div class="f-g"><label>Имя *</label><input type="text" id="pf-name" placeholder="Иванов Иван" maxlength="100" autocomplete="name"></div>
+          <div class="f-g"><label>Компания</label><input type="text" id="pf-co" placeholder="ООО «Наука»" maxlength="150" autocomplete="organization"></div>
+        </div>
+        <div class="f-row">
+          <div class="f-g"><label>Телефон *</label><input type="tel" id="pf-phone" placeholder="+7 (___) ___-__-__" maxlength="20" autocomplete="tel"></div>
+          <div class="f-g"><label>Email</label><input type="email" id="pf-email" placeholder="ivan@company.ru" maxlength="120" autocomplete="email"></div>
+        </div>
+        <div class="f-g"><label>Интересующее оборудование</label>
+          <select id="pf-prod">
+            <option value="">Выберите категорию</option>
+            <option>Перчаточные боксы и эксикаторы</option>
+            <option>Электронные микроскопы (СЭМ, ПЭМ, FIB)</option>
+            <option>Оптические микроскопы</option>
+            <option>Подготовка образцов</option>
+            <option>Твердомеры и трибология</option>
+            <option>Анализаторы и спектрометры (XRF, XRD, OES, ICP, FTIR, Рамановский)</option>
+            <option>Испытательное оборудование</option>
+            <option>Системы томографии</option>
+            <option>Термоанализ и реология (TGA, DSC, реометры)</option>
+            <option>Другое / уточнить</option>
+          </select>
+        </div>
+        <div class="f-g"><label>Комментарий</label><textarea id="pf-msg" placeholder="Опишите задачу или укажите конкретную модель..." maxlength="2000"></textarea></div>
+        <button class="f-sub" onclick="submitPage()">Отправить заявку →</button>
+      </div>
+      <div class="f-ok" id="page-ok"><div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg></div><h3>Заявка отправлена!</h3><p>Наш менеджер свяжется с вами в течение рабочего дня. Спасибо за обращение в FEED-UP!</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ PARTNERS ═══════ -->
+<section id="partners" class="sec">
+  <div class="sec-lbl">Партнёры</div>
+  <h2 class="sec-h2">Производители и клиенты</h2>
+  <p class="sec-desc">Официальные дистрибьюторы ведущих мировых брендов. Среди наших клиентов — институты РАН, ведущие университеты и промышленные предприятия.</p>
+  <div class="pts">
+    <div class="pt">JEOL</div><div class="pt">Struers</div><div class="pt">Jacomex</div>
+    <div class="pt">Phenom-World</div><div class="pt">Rigaku</div><div class="pt">Bruker</div>
+  </div>
+  <div class="pt-sub">Производители-партнёры</div>
+  <div class="pts">
+    <div class="pt">МГУ им. Ломоносова</div><div class="pt">МФТИ</div><div class="pt">МИСИС</div>
+    <div class="pt">ИФХЭ РАН</div><div class="pt">ЦИАМ</div><div class="pt">Росатом</div>
+    <div class="pt">ВИАМ</div><div class="pt">ЦНИИчермет</div>
+  </div>
+</section>
+
+<!-- ═══════ NEWS ═══════ -->
+<section id="news" class="sec">
+  <div class="sec-lbl">Новости</div>
+  <h2 class="sec-h2">Последние новости</h2>
+  <div class="news-g">
+    <div class="news-c rv"><div class="news-th t1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M2.05 12a10 10 0 0 1 19.9 0"/><path d="M12 2c4.5 4 4.5 16 0 20M12 2c-4.5 4-4.5 16 0 20"/></svg></div><div class="news-b"><div class="news-d">Май 2025</div><h3>Новый перчаточный бокс серии GB-2000 в каталоге FEED-UP</h3><p>Расширенная серия с увеличенным рабочим объёмом 1,2 м³ и интегрированной системой мониторинга в реальном времени.</p></div></div>
+    <div class="news-c rv"><div class="news-th t2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div><div class="news-b"><div class="news-d">Март 2025</div><h3>FEED-UP — официальный дистрибьютор JEOL в России</h3><p>Подписано дистрибьюторское соглашение на поставку полного спектра электронных микроскопов JEOL.</p></div></div>
+    <div class="news-c rv"><div class="news-th t3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="news-b"><div class="news-d">Февраль 2025</div><h3>Открытие демозала в Москве</h3><p>В демозале FEED-UP теперь можно протестировать оборудование перед покупкой — запишитесь на бесплатную демонстрацию.</p></div></div>
+  </div>
+</section>
+
+<!-- ═══════ CONTACTS ═══════ -->
+<div id="contacts">
+  <div class="in">
+    <div class="sec-lbl">Контакты</div>
+    <h2 class="sec-h2">Свяжитесь с нами</h2>
+    <div class="con-g">
+      <div class="con-card rv">
+        <div class="cr"><div class="cr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cr-info"><h4>Адрес</h4><p>115191, г. Москва, вн. тер. г. муниципальный округ Донской, пер. Духовской, д. 17, помещ. 15/1</p></div></div>
+        <div class="cr"><div class="cr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.74 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.74 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="cr-info"><h4>Телефон</h4><a href="tel:+79911624337">+7 (991) 162-43-37</a></div></div>
+        <div class="cr"><div class="cr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="cr-info"><h4>Email</h4><a class="eml" data-n="info" data-d="feed-up.ru"></a><br><a class="eml" data-n="sales" data-d="feed-up.ru"></a></div></div>
+        <div class="cr"><div class="cr-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="cr-info"><h4>Режим работы</h4><p>Пн–Пт: 9:00 — 18:00<br>Сб–Вс: выходной</p></div></div>
+        <button class="btn-p" style="width:100%;margin-top:16px" onclick="openModal()">Оставить заявку</button>
+      </div>
+      <div class="map-ph rv"><span>🗺️</span><p>Здесь будет Яндекс.Карта</p><p style="font-size:12px;color:var(--muted)">Добавьте iframe с embed-кодом</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="ft-in">
+    <div class="ft-logo">FEED<span>-UP</span></div>
+    <ul class="ft-nav">
+      <li><a href="#products">Продукция</a></li>
+      <li><a href="#svc">Сервис</a></li>
+      <li><a href="#about">О компании</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+    <div class="ft-copy">© 2025 FEED-UP. Все права защищены.</div>
+  </div>
+</footer>
+
+<!-- ═══════ MODAL ═══════ -->
+<div class="m-ov" id="modal">
+  <div class="m-box">
+    <button class="m-cls" onclick="closeModal()">✕</button>
+    <h2>Оставить заявку</h2>
+    <p class="sub">Укажите контакты — перезвоним в течение рабочего дня.</p>
+    <div id="m-form">
+      <input type="text" name="honey" style="display:none;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="f-row">
+        <div class="f-g"><label>Имя *</label><input type="text" id="m-name" placeholder="Иванов Иван" maxlength="100" autocomplete="name"></div>
+        <div class="f-g"><label>Телефон *</label><input type="tel" id="m-phone" placeholder="+7 (___) ___-__-__" maxlength="20" autocomplete="tel"></div>
+      </div>
+      <div class="f-g"><label>Оборудование</label><input type="text" id="m-prod" placeholder="Перчаточный бокс, микроскоп..." maxlength="200"></div>
+      <div class="f-g"><label>Комментарий</label><textarea id="m-msg" placeholder="Опишите задачу..." style="min-height:80px" maxlength="2000"></textarea></div>
+      <button class="f-sub" onclick="submitModal()">Отправить →</button>
+    </div>
+    <div class="f-ok" id="m-ok"><div class="ok-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg></div><h3>Заявка отправлена!</h3><p>Наш менеджер свяжется с вами в течение рабочего дня.</p></div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  CHAPTER 1 — HERO IMAGE PARALLAX
+// ═══════════════════════════════════════════════
+gsap.registerPlugin(ScrollTrigger);
+(function(){
+  // ── Scroll-driven image parallax ──────────────
+  gsap.to('#hero-img', {
+    y: '22%',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: 1.5
+    }
+  });
+
+  // ── Hero text rises & fades on scroll ─────────
+  gsap.to('.hero-c', {
+    y: '-80px',
+    opacity: 0,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: '5% top',
+      end: '45% top',
+      scrub: 1
+    }
+  });
+
+  // ── Scroll indicator fades quickly ────────────
+  gsap.to('.hero-scroll', {
+    opacity: 0,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: '12% top',
+      scrub: true
+    }
+  });
+
+  // ── Cyan overlay intensity on scroll ──────────
+  gsap.to('.hero-img-overlay', {
+    opacity: 0.4,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+
+  // ── Device card entrance (slide from right) ───
+  gsap.from('#hero-dev', {
+    opacity: 0,
+    x: 70,
+    duration: 1.4,
+    ease: 'power3.out',
+    delay: 0.6
+  });
+
+  // ── Device card scroll parallax (softer than text)
+  gsap.to('#hero-dev', {
+    y: -50,
+    opacity: 0,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: '10% top',
+      end: '58% top',
+      scrub: 1.5
+    }
+  });
+})();
+
+// ═══════════════════════════════════════════════
+//  CHAPTER 2 — PRODUCT 3D VIEWER (interactive)
+// ═══════════════════════════════════════════════
+(function(){
+  const wrap = document.querySelector('.pd-view');
+  const cv = document.getElementById('prod-canvas');
+  if(!wrap||!cv) return;
+
+  const W=wrap.offsetWidth, H=wrap.offsetHeight;
+  const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  renderer.setSize(W,H);
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.1;
+
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(50,W/H,0.1,100);
+  camera.position.set(3.5,2.2,4.5);
+  camera.lookAt(0,0,0);
+
+  const g=new THREE.Group();
+
+  // Main chamber body
+  const bodyG=new THREE.BoxGeometry(2.6,1.6,2.0);
+  const steelM=new THREE.MeshStandardMaterial({color:0x2a3a4a,metalness:.85,roughness:.2});
+  g.add(new THREE.Mesh(bodyG,steelM));
+
+  // Glass front panel
+  const glassG=new THREE.BoxGeometry(2.58,1.58,0.04);
+  const glassM=new THREE.MeshStandardMaterial({color:0x00aacc,metalness:.1,roughness:.05,transparent:true,opacity:.22});
+  const glass=new THREE.Mesh(glassG,glassM);
+  glass.position.z=1.0;
+  g.add(glass);
+
+  // Frame edges
+  const edgeM=new THREE.MeshBasicMaterial({color:0x00d4ff,wireframe:true,transparent:true,opacity:.35});
+  g.add(new THREE.Mesh(bodyG,edgeM));
+
+  // Glove ports
+  const portG=new THREE.TorusGeometry(.3,.05,16,40);
+  const portM=new THREE.MeshStandardMaterial({color:0x111a26,metalness:.7,roughness:.3,emissive:0x001122});
+  const ringM=new THREE.MeshBasicMaterial({color:0x00d4ff});
+  const ringG=new THREE.TorusGeometry(.3,.012,8,40);
+  for(let x of[-0.6,0.6]){
+    const p=new THREE.Mesh(portG,portM); p.position.set(x,0,1.02); g.add(p);
+    const r=new THREE.Mesh(ringG,ringM); r.position.set(x,0,1.04); g.add(r);
+  }
+
+  // Antechamber (right side cylinder)
+  const acG=new THREE.CylinderGeometry(.38,.38,.7,32);
+  const acM=new THREE.MeshStandardMaterial({color:0x1e2d3d,metalness:.9,roughness:.15});
+  const ac=new THREE.Mesh(acG,acM);
+  ac.rotation.z=Math.PI/2; ac.position.set(1.65,0,0);
+  g.add(ac);
+  // Antechamber door ring
+  const adG=new THREE.TorusGeometry(.38,.025,8,32);
+  const adM=new THREE.MeshBasicMaterial({color:0x00d4ff,transparent:true,opacity:.5});
+  const ad=new THREE.Mesh(adG,adM);
+  ad.rotation.y=Math.PI/2; ad.position.set(2.0,0,0);
+  g.add(ad);
+
+  // Legs
+  const legG=new THREE.CylinderGeometry(.06,.06,.9,8);
+  const legM=new THREE.MeshStandardMaterial({color:0x445566,metalness:.9,roughness:.2});
+  for(const x of[-1,1]) for(const z of[-0.75,0.75]){
+    const l=new THREE.Mesh(legG,legM);
+    l.position.set(x,-1.25,z); g.add(l);
+  }
+  // Base plate
+  const bpG=new THREE.BoxGeometry(2.4,.06,1.7);
+  g.add(new THREE.Mesh(bpG,steelM));
+  const bp=new THREE.Mesh(bpG,steelM);
+  bp.position.y=-0.83; g.add(bp);
+
+  // Interior glow plane
+  const igG=new THREE.PlaneGeometry(2.3,1.4);
+  const igM=new THREE.MeshBasicMaterial({color:0x003344,transparent:true,opacity:.6,side:THREE.DoubleSide});
+  const ig=new THREE.Mesh(igG,igM);
+  ig.position.set(0,0,.98); g.add(ig);
+
+  scene.add(g);
+
+  // Lights
+  scene.add(new THREE.AmbientLight(0x334466,2.5));
+  const l1=new THREE.PointLight(0x00d4ff,5,20); l1.position.set(3,5,4); scene.add(l1);
+  const l2=new THREE.PointLight(0x0055ff,3,15); l2.position.set(-4,0,3); scene.add(l2);
+  const l3=new THREE.PointLight(0x00ffaa,2,10); l3.position.set(0,3,-2); scene.add(l3);
+
+  // Orbit controls (manual)
+  let drag=false,lx=0,ly=0,ry=-.3,rx=.18;
+  cv.addEventListener('mousedown',e=>{drag=true;lx=e.clientX;ly=e.clientY;});
+  document.addEventListener('mouseup',()=>drag=false);
+  document.addEventListener('mousemove',e=>{
+    if(!drag)return;
+    ry+=(e.clientX-lx)*.012; rx+=(e.clientY-ly)*.006;
+    rx=Math.max(-.55,Math.min(.7,rx));
+    lx=e.clientX;ly=e.clientY;
+  });
+  // Touch support
+  cv.addEventListener('touchstart',e=>{drag=true;lx=e.touches[0].clientX;ly=e.touches[0].clientY;});
+  document.addEventListener('touchend',()=>drag=false);
+  document.addEventListener('touchmove',e=>{
+    if(!drag)return;
+    ry+=(e.touches[0].clientX-lx)*.012; rx+=(e.touches[0].clientY-ly)*.006;
+    lx=e.touches[0].clientX;ly=e.touches[0].clientY;
+  });
+
+  let auto=0;
+  (function anim(){
+    requestAnimationFrame(anim);
+    if(!drag) auto+=.004;
+    g.rotation.y=auto+ry;
+    g.rotation.x=rx;
+    renderer.render(scene,camera);
+  })();
+
+  window.addEventListener('resize',()=>{
+    const nW=wrap.offsetWidth,nH=wrap.offsetHeight;
+    camera.aspect=nW/nH; camera.updateProjectionMatrix();
+    renderer.setSize(nW,nH);
+  });
+})();
+
+// ═══════════════════════════════════════════════
+//  CHAPTER 3 — SCROLL ANIMATIONS (GSAP + Motion)
+// ═══════════════════════════════════════════════
+gsap.registerPlugin(ScrollTrigger);
+
+// ── Header scroll state ──────────────────────────
+ScrollTrigger.create({start:'top -50',onUpdate:s=>{
+  document.getElementById('hdr').classList.toggle('on',s.progress>0);
+}});
+
+// ── Hero entrance ────────────────────────────────
+gsap.from('.hero-badge',{duration:1,opacity:0,y:20,delay:.3});
+gsap.from('.hero-h1',{duration:1.3,opacity:0,y:45,delay:.5,ease:'power3.out'});
+gsap.from('.hero-sub',{duration:1,opacity:0,y:28,delay:.85});
+gsap.from('.hero-btns',{duration:1,opacity:0,y:18,delay:1.1});
+
+// ── Scroll progress bar ───────────────────────────
+(function(){
+  const prog = document.getElementById('prog');
+  if(!prog) return;
+  window.addEventListener('scroll',()=>{
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const dh = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.transform = 'scaleX('+(dh>0?st/dh:0)+')';
+  },{passive:true});
+})();
+
+// ── IntersectionObserver reveal + fallback ────────
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});
+},{threshold:0, rootMargin:'0px 0px 120px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rv:not(.vis)').forEach(el=>el.classList.add('vis')),1800);
+
+// ── Motion stagger for card grids ────────────────
+(function(){
+  if(typeof Motion==='undefined') return;
+  const {inView,animate,stagger} = Motion;
+  ['.prod-g','.meth-g','.news-g','#adv .adv-g'].forEach(sel=>{
+    const el = document.querySelector(sel);
+    if(!el) return;
+    inView(el,()=>{
+      animate(Array.from(el.children),
+        {opacity:[0,1],y:[24,0]},
+        {delay:stagger(.07),duration:.5,easing:[.16,1,.3,1]});
+    },{margin:'0px 0px -60px 0px'});
+  });
+})();
+
+// ── Counter animation for stats ───────────────────
+(function(){
+  const targets = document.querySelectorAll('.stat-n');
+  const run = el => {
+    const raw = el.textContent.trim();
+    const num = parseInt(raw);
+    const suffix = raw.replace(/\d/g,'');
+    if(!num) return;
+    let start = null;
+    const dur = 1600;
+    (function step(ts){
+      if(!start) start=ts;
+      const p = Math.min((ts-start)/dur,1);
+      const ease = 1-Math.pow(1-p,3);
+      el.textContent = Math.round(num*ease)+suffix;
+      if(p<1) requestAnimationFrame(step);
+    })(performance.now());
+  };
+  const cio = new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){run(e.target);cio.unobserve(e.target);}});
+  },{threshold:.5});
+  targets.forEach(el=>cio.observe(el));
+})();
+
+// ── 3D tilt on cards ─────────────────────────────
+(function(){
+  document.querySelectorAll('.prod-c,.meth-c,.news-c').forEach(c=>{
+    c.addEventListener('mousemove',e=>{
+      const r=c.getBoundingClientRect();
+      const x=((e.clientX-r.left)/r.width -.5)*2;
+      const y=((e.clientY-r.top) /r.height-.5)*2;
+      c.style.transition='box-shadow .3s,border-color .3s,background .3s,transform .1s';
+      c.style.transform=`translateY(-6px) rotateX(${-y*4}deg) rotateY(${x*5}deg)`;
+    });
+    c.addEventListener('mouseleave',()=>{
+      c.style.transition='box-shadow .45s,border-color .45s,background .45s,transform .45s';
+      c.style.transform='';
+    });
+  });
+})();
+
+// ── Catalog accordion (mobile) ────────────────────
+(function(){
+  function setupAccordion(){
+    if(window.innerWidth > 768) return;
+    document.querySelectorAll('.cat-section').forEach(sec=>{
+      const hdr = sec.querySelector('.cat-hdr');
+      if(!hdr || hdr.querySelector('.cat-toggle')) return;
+      const title = hdr.querySelector('.cat-hdr-left');
+      const count = hdr.querySelector('.cat-count');
+      const btn = document.createElement('button');
+      btn.className='cat-toggle';
+      btn.setAttribute('aria-expanded','false');
+      btn.appendChild(title.cloneNode(true));
+      const iconEl = document.createElement('span');
+      iconEl.className='cat-toggle-icon'; iconEl.textContent='+';
+      btn.appendChild(iconEl);
+      hdr.innerHTML='';
+      if(count) hdr.appendChild(count);
+      hdr.appendChild(btn);
+      btn.addEventListener('click',()=>{
+        const open = sec.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true':'false');
+        if(open) sec.querySelectorAll('.rv:not(.vis)').forEach(el=>el.classList.add('vis'));
+      });
+    });
+  }
+  setupAccordion();
+  window.addEventListener('resize', setupAccordion);
+})();
+
+// ═══════════════════════════════════════════════
+//  CHAPTER 4 — MODAL / FORM LOGIC
+// ═══════════════════════════════════════════════
+function openModal(product){
+  document.getElementById('modal').classList.add('on');
+  document.body.style.overflow='hidden';
+  if(product) document.getElementById('m-prod').value=product;
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('on');
+  document.body.style.overflow='';
+  setTimeout(()=>{
+    document.getElementById('m-form').style.display='block';
+    document.getElementById('m-ok').style.display='none';
+    document.getElementById('m-name').value='';
+    document.getElementById('m-phone').value='';
+    document.getElementById('m-prod').value='';
+    document.getElementById('m-msg').value='';
+  },350);
+}
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+// ── Получить ключ: https://web3forms.com → ввести info@feed-up.ru → активировать письмо
+const WEB3FORMS_KEY = '0918022a-359b-4e36-9784-572d54415f2d';
+
+// Де-обфускация email после загрузки страницы
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.eml').forEach(el => {
+    const addr = el.dataset.n + '@' + el.dataset.d;
+    if (el.tagName === 'A') { el.href = 'mailto:' + addr; }
+    el.textContent = addr;
+  });
+});
+
+async function sendToEmail(payload, btnEl, formEl, okEl) {
+  // Honeypot check — если заполнен, это бот
+  const honey = formEl.querySelector('[name="honey"]');
+  if (honey && honey.value) return;
+
+  btnEl.disabled = true;
+  const orig = btnEl.textContent;
+  btnEl.textContent = 'Отправка…';
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({
+        access_key: WEB3FORMS_KEY,
+        from_name: 'FEED-UP Website',
+        subject: 'Новая заявка с сайта feed-up.ru',
+        ...payload
+      })
+    });
+    const data = await res.json();
+    if (data.success) {
+      formEl.style.display = 'none';
+      okEl.style.display = 'block';
+    } else {
+      alert('Не удалось отправить заявку. Позвоните нам: +7 (991) 162-43-37');
+      btnEl.disabled = false;
+      btnEl.textContent = orig;
+    }
+  } catch {
+    alert('Ошибка сети. Позвоните нам: +7 (991) 162-43-37');
+    btnEl.disabled = false;
+    btnEl.textContent = orig;
+  }
+}
+
+function submitModal() {
+  const n = document.getElementById('m-name').value.trim();
+  const p = document.getElementById('m-phone').value.trim();
+  if (!n || !p) { alert('Пожалуйста, укажите имя и телефон'); return; }
+  const prod = document.getElementById('m-prod').value.trim();
+  const msg  = document.getElementById('m-msg').value.trim();
+  sendToEmail(
+    { name: n, phone: p, equipment: prod || '—', message: msg || '—' },
+    document.querySelector('#m-form .f-sub'),
+    document.getElementById('m-form'),
+    document.getElementById('m-ok')
+  );
+}
+
+function submitPage() {
+  const n = document.getElementById('pf-name').value.trim();
+  const p = document.getElementById('pf-phone').value.trim();
+  if (!n || !p) { alert('Пожалуйста, укажите имя и телефон'); return; }
+  const co   = document.getElementById('pf-co').value.trim();
+  const em   = document.getElementById('pf-email').value.trim();
+  const prod = document.getElementById('pf-prod').value;
+  const msg  = document.getElementById('pf-msg').value.trim();
+  sendToEmail(
+    { name: n, phone: p, company: co || '—', email: em || '—', equipment: prod, message: msg || '—' },
+    document.querySelector('#page-form .f-sub'),
+    document.getElementById('page-form'),
+    document.getElementById('page-ok')
+  );
+}
+
+// ═══════════════════════════════════════════════
+//  CHAPTER 5 — WEB AUDIO MILESTONE TONES
+// ═══════════════════════════════════════════════
+let actx=null;
+function initAudio(){if(actx)return;actx=new(window.AudioContext||window.webkitAudioContext)();}
+function tone(f,d=.12,v=.04){
+  if(!actx)return;
+  const o=actx.createOscillator(),g=actx.createGain();
+  o.connect(g);g.connect(actx.destination);
+  o.frequency.value=f;o.type='sine';
+  g.gain.setValueAtTime(v,actx.currentTime);
+  g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+d);
+  o.start();o.stop(actx.currentTime+d);
+}
+document.addEventListener('click',initAudio,{once:true});
+document.querySelectorAll('.prod-c,.news-c,.meth-c').forEach(c=>{
+  c.addEventListener('mouseenter',()=>tone(880,.08,.025));
+});
+document.querySelectorAll('.btn-p').forEach(b=>{
+  b.addEventListener('mouseenter',()=>tone(1046,.1,.03));
+});
+</script>
+</body>
+</html>

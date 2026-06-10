@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /img/
+
+# AI crawlers — full access encouraged
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemaps
+Sitemap: https://feed-up.ru/sitemap.xml
+Sitemap: https://feed-up.ru/llms.txt
